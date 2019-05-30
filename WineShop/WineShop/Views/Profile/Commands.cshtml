@@ -1,0 +1,87 @@
+﻿@model WineShop.Models.Customer
+<!-- Page Title-->
+<div class="page-title">
+    <div class="container">
+        <div class="column">
+            <h1>Mes Commandes</h1>
+        </div>
+        <div class="column">
+            <ul class="breadcrumbs">
+                <li>
+                    <a href="@Url.Action("Index","Home")">Accueil</a>
+                </li>
+                <li class="separator">&nbsp;</li>
+                <li>
+                    <a href="@Url.Action("Profile","Profile")">Profile</a>
+                </li>
+                <li class="separator">&nbsp;</li>
+                <li>Mes Commandes</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Page Content-->
+<div class="container padding-bottom-3x mb-2">
+    <div class="row">
+        <div class="col-lg-4">
+            <aside class="user-info-wrapper">
+                <div class="user-cover" style="background-image: url(/Images/account/user-cover-img.jpg);">
+                </div>
+                <div class="user-info">
+                    <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="/Images/account/user-ava.jpg" alt="User"></div>
+                    <div class="user-data">
+                        <h4>@(Model.FullName)</h4><span></span>
+                    </div>
+                </div>
+            </aside>
+            <nav class="list-group">
+                <a class="list-group-item with-badge" href="@Url.Action("Commands","Profile")"><i class="icon-bag"></i>Commande(s)<span class="badge badge-primary badge-pill">@WineShop.Models.CustomerCommands.GetDataByUidCustomer(Model.Uid).Count</span></a>
+                <a class="list-group-item with-badge" href="@Url.Action("Invoices","Profile")"><i class="icon-bag"></i>Facture(s)<span class="badge badge-primary badge-pill">@WineShop.Models.CustomerInvoices.GetDataByUidCustomer(Model.Uid).Count</span></a>
+                <a class="list-group-item active" href="#"><i class="icon-head"></i>Profile</a>
+                <!--<a class="list-group-item" href="account-address.html"><i class="icon-map"></i>Addresses</a>
+            <a class="list-group-item with-badge" href="account-wishlist.html"><i class="icon-heart"></i>Wishlist<span class="badge badge-primary badge-pill">3</span></a>
+            <a class="list-group-item with-badge" href="account-tickets.html"><i class="icon-tag"></i>My Tickets<span class="badge badge-primary badge-pill">4</span></a>-->
+            </nav>
+        </div>
+        <div class="col-lg-8">
+            <div class="padding-top-2x mt-2 hidden-lg-up"></div>
+
+            <div class="table-responsive">
+                <!--    Tableau de Bon de commande    -->
+                <table class="table table-hover margin-bottom-none">
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Date Cde</th>
+                            <th>Etat</th>
+                            <th>Total H.T.</th>
+                            <th>Total T.V.A.</th>
+                            <th>Total T.T.C.</th>
+                            <th>Frais Liv.</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (WineShop.Models.CustomerCommand item in WineShop.Models.CustomerCommands.GetDataByUidCustomer(Model.Uid))
+                    {
+                        <tr>
+                            <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">@(item.NumCommand)</a></td>
+                            <td>@(item.DtOrdered)</td>
+                            <td><span class="text-danger">@(item.StateDescription)</span></td>
+                            <td><span class="text-medium">@(item.Amount.ToString(WineShop.Tools.Framework.PriceFormat)) @(WineShop.Tools.App.Currency.GetCurrent().Symbol)</span></td>
+                            <td><span class="text-medium">@(item.AmountVAT.ToString(WineShop.Tools.Framework.PriceFormat)) @(WineShop.Tools.App.Currency.GetCurrent().Symbol)</span></td>
+                            <td><span class="text-medium">@(item.AmountATI.ToString(WineShop.Tools.Framework.PriceFormat)) @(WineShop.Tools.App.Currency.GetCurrent().Symbol)</span></td>
+                            <td><span class="text-medium">@(item.AmountShipping.ToString(WineShop.Tools.Framework.PriceFormat)) @(WineShop.Tools.App.Currency.GetCurrent().Symbol)</span></td>
+                            <td><span class="text-medium">@(item.AmountATIFinal.ToString(WineShop.Tools.Framework.PriceFormat)) @(WineShop.Tools.App.Currency.GetCurrent().Symbol)</span></td>
+                            <td><a href="@Url.Action("Commands","Files", new { @num=item.NumCommand})" target="_blank"><i class="fa fa-file-zip-o"></i></a></td>
+                        </tr>
+                }
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+            <div class="text-right"><a class="btn btn-link-primary margin-bottom-none" href="#"><i class="icon-download"></i>&nbsp;Order Details</a></div>
+        </div>
+    </div>
+</div>

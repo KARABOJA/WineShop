@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = ".: WineShop - The Best Of French Wine :.";
+}
+
+<!-- Main Slider-->
+<section class="hero-slider" style="background-image: url('/Images/HomeSlider/image22.jpg');">
+    <div class="owl-carousel large-controls dots-inside" data-owl-carousel="{ &quot;nav&quot;: true, &quot;dots&quot;: true, &quot;loop&quot;: true, &quot;autoplay&quot;: true, &quot;autoplayTimeout&quot;: 7000 }">
+        <div class="item">
+            <div class="container padding-top-3x">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-5 col-md-6 padding-bottom-2x text-md-left text-center">
+                        <div class="from-bottom">
+                            <img class="d-inline-block w-150 mb-4" src="/Images/HomeSlider/Capture1.png" alt="Moelleux">
+                            <div class="h2 text-body text-normal mb-2 pt-1">Moelleux & Doux</div>
+                            <div class="h2 text-body text-normal mb-4 pb-1">Prix de départ <span class="text-bold">37.99€</span></div>
+                        </div>
+                        <!-- <a class="btn btn-primary scale-up delay-1" href="shop-single.html">Shop Now</a>-->
+                    </div>
+                    <div class="col-md-6 padding-bottom-2x mb-3"><img class="d-block mx-auto" src="~/Images/HomeSlider/moelleux_noel.jpg" alt="Puma Backpack" /></div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="container padding-top-3x">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-5 col-md-6 padding-bottom-2x text-md-left text-center">
+                        <div class="from-bottom">
+                            <img class="d-inline-block w-200 mb-4" src="/Images/HomeSlider/lockups_all-colors.jpg" alt="Converse">
+                            <div class="h2 text-body text-normal mb-2 pt-1">Vin & Bordeaux</div>
+                            <div class="h2 text-body text-normal mb-4 pb-1">Pour seulement <span class="text-bold">59.99€</span></div>
+                        </div> <!-- <a class="btn btn-primary scale-up delay-1" href="shop-single.html">Shop Now</a>-->
+                    </div>
+                    <div class="col-md-6 padding-bottom-2x mb-3"><img class="d-block mx-auto" src="~/Images/HomeSlider/bdx_15_ope.jpg" alt="Chuck Taylor All Star II" /></div>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="container padding-top-3x">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-5 col-md-6 padding-bottom-2x text-md-left text-center">
+                        <div class="from-bottom">
+                            <img class="d-inline-block mb-4" src="/Images/HomeSlider/Capture2.png" style="width: 125px;" alt="Motorola">
+                            <div class="h2 text-body text-normal mb-2 pt-1">Nouveau vin Italien</div>
+                            <div class="h2 text-body text-normal mb-4 pb-1">Pour seulement <span class="text-bold">49.99€</span></div>
+                        </div><!-- <a class="btn btn-primary scale-up delay-1" href="shop-single.html">Shop Now</a>-->
+                    </div>
+                    <div class="col-md-6 padding-bottom-2x mb-3"><img class="d-block mx-auto" src="/Images/HomeSlider/nouvelle_vague_italie.jpg" alt="Moto 360" /></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Top Categories-->
+<section class="container padding-top-3x">
+    <h3 class="text-center mb-30">Top Categories</h3>
+    <div class="row">
+        @foreach (WineShop.Models.Category itemCategory in WineShop.Models.Categories.GetDataTop())
+        {
+            <div class="col-md-4 col-sm-6">
+                <div class="card mb-30">
+                    <a class="card-img-tiles" href="@Url.Action("Articles","Articles",new { @type="Wine",@categorie=itemCategory.Name})">
+                        <div class="inner">
+                            <div class="main-img">
+                                <img src="/Images/shop/products/BOR0008.jpg" alt="Category" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="card-body text-center">
+                        <h4 class="card-title">@itemCategory.Description</h4>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

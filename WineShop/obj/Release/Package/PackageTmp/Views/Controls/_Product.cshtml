@@ -1,0 +1,23 @@
+﻿@model WineShop.Models.Article
+<div class="grid-item" style="position: absolute; left: 434px; top: 0px;">
+    <div class="product-card">
+        <div class="rating-stars">
+            @for (int iStar = 0; iStar < 5; iStar++)
+            {
+                if (iStar < (int)Model.Notes)
+                {<i class="icon-star filled"></i>}
+                else
+                {<i class="icon-star"></i>}
+            }
+        </div>
+        <a class="product-thumb" href="@Url.Action("Article","Articles")/@(Model.CodeProduct)">
+            <img src="/Images/shop/products/@(Model.CodeProduct).jpg" alt="@Model.CodeProduct">
+        </a>
+        <h3 class="product-title"><a href="@Url.Action("Article","Articles")/@(Model.CodeProduct)">@Model.Name</a></h3>
+        <h4 class="product-price">@Model.UnitPriceATI.ToString("0.00") @Model.CurrencySymbol</h4>
+        <div class="product-buttons">
+            <!--<button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="" data-original-title="Whishlist"><i class="icon-heart"></i></button>-->
+            <button class="btn btn-outline-primary btn-sm btn-add-basket" uid="@Model.Uid" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Article" data-toast-message="ajouter au panier avec succès">Ajouter au panier</button>
+        </div>
+    </div>
+</div>

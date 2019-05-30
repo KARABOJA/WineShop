@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        @ViewBag.Title
+    </title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="wineshop - Universal E-Commerce Template">
+    <meta name="keywords" content="shop, e-commerce, modern, flat style, responsive, online store, business, mobile, blog, bootstrap 4, html5, css3, jquery, js, gallery, slider, touch, creative, clean">
+    <meta name="author" content="Rokaux">
+    <!-- Mobile Specific Meta Tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Favicon and Apple Icons-->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
+    <!-- Vendor Styles including: Bootstrap, Font Icons, Plugins, etc.-->
+    <link rel="stylesheet" media="screen" href="/Styles/Themes/Default/vendor.min.css">
+    <!-- Main Template Styles-->
+    <link id="mainStyles" rel="stylesheet" media="screen" href="/Styles/Themes/Default/styles.css">
+    <!-- Font Awesome Styles-->
+    <link rel="stylesheet" href="/Styles/FontAwesome/font-awesome.css" type="text/css">
+    <!--    Section CSS    ------------------------>
+    @RenderSection("SectionCSS", false)
+    <!--------------------------------------------->
+    <!-- Modernizr-->
+    <script src="/Scripts/modernizr.min.js"></script>
+    <script src="/Scripts/jquery-3.2.1.min.js"></script>
+    <script src="/Scripts/jquery.camatsoft.tools.js"></script>
+    <!--    Section Script de Début    ------------>
+    @RenderSection("SectionScriptsBegin", false)
+    <script type="text/javascript">
+        $(function () {
+            $(".btn-add-basket").click(function () {
+                var uid = $(this).attr("uid");
+                $.ajax({
+                    method: "POST",
+                    url: "/AddBasket.aspx",
+                    data: {
+                        UidArticle: uid
+                    }
+                }).done(function (msg) {
+                    if (msg == "True") {
+                        location.reload();
+                    }
+                });
+            });
+            $(".btn-remove-basket").click(function () {
+                var uid = $(this).attr("uid");
+                $.ajax({
+                    method: "POST",
+                    url: "/RemoveBasket.aspx",
+                    data: {
+                        UidArticle: uid
+                    }
+                }).done(function (msg) {
+                    if (msg == "True") {
+                        location.reload();
+                    }
+                });
+            });
+            $(".btn-clear-basket").click(function () {
+                $.ajax({
+                    method: "POST",
+                    url: "/ClearBasket.aspx",
+                }).done(function (msg) {
+                    if (msg == "True") {
+                        location.reload();
+                    }
+                });
+            });
+        });
+    </script>
+    <!--------------------------------------------->
+</head>
+<!-- Body-->
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="dlgAlert" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+            <!-- /Modal content-->
+        </div>
+    </div>
+    <!-- /Modal -->
+    <!-- Off-Canvas Category Menu-->
+    <div class="offcanvas-container" id="shop-categories">
+        <div class="offcanvas-header">
+            <h3 class="offcanvas-title">Shop Categories</h3>
+        </div>
+        <nav class="offcanvas-menu">
+            <ul class="menu">
+                <li class="has-children">
+                    <span><a href="#">Men's Shoes</a><span class="sub-menu-toggle"></span></span>
+                    <ul class="offcanvas-submenu">
+                        <li><a href="#">Sneakers</a></li>
+                        <li><a href="#">Loafers</a></li>
+                        <li><a href="#">Boat Shoes</a></li>
+                        <li><a href="#">Sandals</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                </li>
+                <li class="has-children">
+                    <span><a href="#">Women's Shoes</a><span class="sub-menu-toggle"></span></span>
+                    <ul class="offcanvas-submenu">
+                        <li><a href="#">Sandals</a></li>
+                        <li><a href="#">Flats</a></li>
+                        <li><a href="#">Sneakers</a></li>
+                        <li><a href="#">Heels</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                </li>
+                <li class="has-children">
+                    <span><a href="#">Men's Clothing</a><span class="sub-menu-toggle"></span></span>
+                    <ul class="offcanvas-submenu">
+                        <li><a href="#">Shirts &amp; Tops</a></li>
+                        <li><a href="#">Pants</a></li>
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                </li>
+                <li class="has-children">
+                    <span><a href="#">Women's Clothing</a><span class="sub-menu-toggle"></span></span>
+                    <ul class="offcanvas-submenu">
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Shirts &amp; Tops</a></li>
+                        <li><a href="#">Shorts</a></li>
+                        <li><a href="#">Swimwear</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                </li>
+                <li class="has-children">
+                    <span><a href="#">Kid's Shoes</a><span class="sub-menu-toggle"></span></span>
+                    <ul class="offcanvas-submenu">
+                        <li><a href="#">Boots</a></li>
+                        <li><a href="#">Sandals</a></li>
+                        <li><a href="#">Crib Shoes</a></li>
+                        <li><a href="#">Loafers</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                </li>
+                <li class="has-children">
+                    <span><a href="#">Bags</a><span class="sub-menu-toggle"></span></span>
+                    <ul class="offcanvas-submenu">
+                        <li><a href="#">Handbags</a></li>
+                        <li><a href="#">Backpacks</a></li>
+                        <li><a href="#">Luggage</a></li>
+                        <li><a href="#">Wallets</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                </li>
+                <li class="has-children">
+                    <span><a href="#">Accessories</a><span class="sub-menu-toggle"></span></span>
+                    <ul class="offcanvas-submenu">
+                        <li><a href="#">Sunglasses</a></li>
+                        <li><a href="#">Hats</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Jewelry</a></li>
+                        <li><a href="#">Belts</a></li>
+                        <li><a href="#">View All</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Off-Canvas Mobile Menu-->
+    @Html.Partial("/Views/Controls/_PartialMenuMobile.cshtml")
+    @Html.Partial("/Views/Controls/_PartialHeader.cshtml")
+    <!-- Off-Canvas Wrapper-->
+    <div class="offcanvas-wrapper">
+        <!-- Page Content-->
+        @RenderBody()
+        <!-- Footer-->
+        @Html.Partial("/Views/Controls/_PartialFooter.cshtml")
+    </div>
+    <!-- Photoswipe container-->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Back To Top Button-->
+    <a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
+    <!-- Backdrop-->
+    <div class="site-backdrop"></div>
+    <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
+    <script src="/Scripts/vendor.min.js"></script>
+    <script src="/Scripts/scripts.min.js"></script>
+    <!--    Section de Scripts de Fin    ---------->
+    @RenderSection("SectionScriptsEnd", false)
+    <!--------------------------------------------->
+</body>
+</html>

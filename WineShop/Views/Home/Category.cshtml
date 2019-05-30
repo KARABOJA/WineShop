@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = ".: WineShop - Category :.";
+
+    WineShop.Models.Articles articlesPopular = new WineShop.Models.Articles();
+    articlesPopular.CreateTestPopular();
+}
+
+<!-- Off-Canvas Wrapper-->
+@{
+    <div class="offcanvas-wrapper">
+        <!-- Page Title-->
+        <div class="page-title">
+            <div class="container">
+                <div class="column">
+                    <h1>Categories</h1>
+                </div>
+                <div class="column">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="@Url.Action("Index","Home")">Acceuil</a>
+                        </li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Categories</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Content-->
+        <div class="container padding-bottom-2x mb-2">
+            <div class="row">
+                <!-- Categories-->
+                <div class="col-xl-9 col-lg-8 order-lg-2">
+                    <!-- Promo banner-->
+                    <div class="alert alert-image-bg alert-dismissible fade show text-center mb-4" style="background-image: url(img/banners/alert-bg.jpg);">
+                        <span class="alert-close text-white" data-dismiss="alert"></span>
+                    </div>
+                    @foreach (WineShop.Models.TypeCategory itemTypeCategory in WineShop.Models.TypeCategories.GetData())
+                    {
+                        <h3>@itemTypeCategory.Description</h3>
+                        <div class="row">
+                            @foreach (WineShop.Models.Category itemCategory in WineShop.Models.Categories.GetDataByUidTypeCategory(itemTypeCategory.Uid))
+                            {
+                                <div class="col-sm-6">
+                                    <div class="card mb-30">
+                                        <a class="card-img-tiles" href="shop-grid-ls.html">
+                                            <div class="inner">
+                                                <div class="main-img"><img src="img/shop/categories/01.jpg" alt="Category"></div>
+                                                <div class="thumblist"><img src="img/shop/categories/02.jpg" alt="Category"><img src="img/shop/categories/03.jpg" alt="Category"></div>
+                                            </div>
+                                        </a>
+                                        <div class="card-body text-center">
+                                            <h4 class="card-title">@(itemCategory.Name)</h4>
+                                            <!--<p class="text-muted">(item.UnitPrice)</p>-->
+                                            <a class="btn btn-outline-primary btn-sm" href="@Url.Action("Articles", "Articles", new { type = itemCategory.Name })">View Category</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+                <!-- Sidebar          -->
+                <div class="col-xl-3 col-lg-4 order-lg-1">
+                    <aside class="sidebar">
+                        <div class="padding-top-2x hidden-lg-up"></div>
+                        <section class="widget widget-categories">
+                            <h3 class="widget-title">Marque populaire</h3>
+                            <ul>
+                                @foreach (var item in articlesPopular.Items)
+                                {
+                                    <li><a href="#">@item.Description</a></li>
+                                }
+                            </ul>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+}

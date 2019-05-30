@@ -1,0 +1,112 @@
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\Template.dll.config
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\Template.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\Template.pdb
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\Microsoft.Web.Infrastructure.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\System.Web.Helpers.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\System.Web.Mvc.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\System.Web.Razor.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\System.Web.Webpages.Deployment.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\System.Web.Webpages.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\System.Web.Webpages.Razor.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\System.Web.Razor.xml
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\System.Web.Webpages.xml
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\System.Web.Webpages.Deployment.xml
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\System.Web.Webpages.Razor.xml
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\System.Web.Helpers.xml
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\System.Web.Mvc.xml
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\fr\System.Web.Razor.resources.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\fr\System.Web.Webpages.resources.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\fr\System.Web.Webpages.Deployment.resources.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\fr\System.Web.Webpages.Razor.resources.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\fr\System.Web.Helpers.resources.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\bin\fr\System.Web.Mvc.resources.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\obj\Debug\Template.csprojResolveAssemblyReference.cache
+D:\Development\ProjectWD\WineShop\WineShop\Template\obj\Debug\Template.csproj.CoreCompileInputs.cache
+D:\Development\ProjectWD\WineShop\WineShop\Template\obj\Debug\Template.dll
+D:\Development\ProjectWD\WineShop\WineShop\Template\obj\Debug\Template.pdb
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\Template.dll.config
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\Template.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\Template.pdb
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\Microsoft.Web.Infrastructure.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\System.Web.Helpers.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\System.Web.Mvc.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\System.Web.Razor.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\System.Web.Webpages.Deployment.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\System.Web.Webpages.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\System.Web.Webpages.Razor.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\System.Web.Razor.xml
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\System.Web.Webpages.xml
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\System.Web.Webpages.Deployment.xml
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\System.Web.Webpages.Razor.xml
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\System.Web.Helpers.xml
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\System.Web.Mvc.xml
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\fr\System.Web.Razor.resources.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\fr\System.Web.Webpages.resources.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\fr\System.Web.Webpages.Deployment.resources.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\fr\System.Web.Webpages.Razor.resources.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\fr\System.Web.Helpers.resources.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\bin\fr\System.Web.Mvc.resources.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\obj\Debug\Template.csprojResolveAssemblyReference.cache
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\obj\Debug\Template.csproj.CoreCompileInputs.cache
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\obj\Debug\Template.dll
+D:\Development\ProjectWD\WineShop 2.0\WineShop\Template\obj\Debug\Template.pdb
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\Template.dll.config
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\Template.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\Template.pdb
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\Microsoft.Web.Infrastructure.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\System.Web.Helpers.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\System.Web.Mvc.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\System.Web.Razor.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\System.Web.Webpages.Deployment.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\System.Web.Webpages.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\System.Web.Webpages.Razor.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\System.Web.Razor.xml
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\System.Web.Webpages.xml
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\System.Web.Webpages.Deployment.xml
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\System.Web.Webpages.Razor.xml
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\System.Web.Helpers.xml
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\System.Web.Mvc.xml
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\fr\System.Web.Razor.resources.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\fr\System.Web.Webpages.resources.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\fr\System.Web.Webpages.Deployment.resources.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\fr\System.Web.Webpages.Razor.resources.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\fr\System.Web.Helpers.resources.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\bin\fr\System.Web.Mvc.resources.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\obj\Debug\Template.csprojResolveAssemblyReference.cache
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\obj\Debug\Template.csproj.CoreCompileInputs.cache
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\obj\Debug\Template.dll
+D:\Development\ProjectWD\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop 2_0_1_3\WineShop\Template\obj\Debug\Template.pdb
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\Template.dll.config
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\Template.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\Template.pdb
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\Microsoft.Web.Infrastructure.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\System.Web.Helpers.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\System.Web.Mvc.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\System.Web.Razor.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\System.Web.Webpages.Deployment.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\System.Web.Webpages.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\System.Web.Webpages.Razor.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\System.Web.Razor.xml
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\System.Web.Webpages.xml
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\System.Web.Webpages.Deployment.xml
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\System.Web.Webpages.Razor.xml
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\System.Web.Helpers.xml
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\System.Web.Mvc.xml
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\fr\System.Web.Razor.resources.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\fr\System.Web.Webpages.resources.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\fr\System.Web.Webpages.Deployment.resources.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\fr\System.Web.Webpages.Razor.resources.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\fr\System.Web.Helpers.resources.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\bin\fr\System.Web.Mvc.resources.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\obj\Debug\Template.csprojResolveAssemblyReference.cache
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\obj\Debug\Template.csproj.CoreCompileInputs.cache
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\obj\Debug\Template.dll
+D:\Development\ProjectWD\WineShop\WineShop\WineShop\Template\obj\Debug\Template.pdb

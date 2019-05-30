@@ -1,0 +1,207 @@
+﻿@model WineShop.Models.Views.ModelCheckoutResume
+@{
+    Layout = "/Views/Shared/_Desktop.cshtml";
+}
+@section SectionScriptsBegin{
+    <script type="text/javascript">
+        $(function () {
+            $("#btnSubmit").click(function () {
+                $("#btnSubmit").hide();
+                $.ajax({
+                    method: "POST",
+                    url: "/fr-FR/Post/CheckoutReview",
+                    data: {
+                        Cmd : "@Model.module.PBX_CMD"
+                    }
+                })
+                    .done(function () {
+                        $("#formPayment").submit();
+                    });
+            });
+        });
+    </script>
+}
+<!-- Body-->
+<body>
+    <!-- Off-Canvas Category Menu-->
+    <!-- Off-Canvas Mobile Menu-->
+    <!-- Topbar-->
+    <!-- Navbar-->
+    <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+    <!-- Off-Canvas Wrapper-->
+    <div class="offcanvas-wrapper">
+        <!-- Page Title-->
+        <div class="page-title">
+            <div class="container">
+                <div class="column">
+                    <h1>Résumé</h1>
+                </div>
+                <div class="column">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="index.html">Acceuil</a>
+                        </li>
+                        <li class="separator">&nbsp;</li>
+                        <li>Résumé</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Content-->
+        <div class="container padding-bottom-3x mb-2">
+            <form method="POST" action="https://preprod-tpeweb.paybox.com/cgi/MYchoix_pagepaiement.cgi" id="formPayment">
+                @Html.Raw(Model.HtlmsControls)
+                <div class="row">
+                    <!-- Checkout Adress-->
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="checkout-steps">
+                            <a class="active">5. Résumé</a>
+                            <a class="completed" href="@Url.Action("CheckoutPayment", "Home")"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>4. Paiment</a>
+                            <a class="completed" href="@Url.Action("CheckoutShipping", "Home")"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>3. Mode Liv.</a>
+                            <a class="completed" href="@Url.Action("CheckoutAddressDelivery", "Home")"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>2. Adresse Liv.</a>
+                            <a class="completed" href="@Url.Action("CheckoutAddressInvoice", "Home")"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>1. Adresse Fac.</a>
+                        </div>
+                        <h4>Review Your Order</h4>
+                        <hr class="padding-bottom-1x">
+                        <div class="table-responsive shopping-cart">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Produit</th>
+                                        <th style="width:80px; text-align:center">Qté</th>
+                                        <th style="width:100px; text-align:center">P.U</th>
+                                        <th style="width:100px; text-align:center">Total H.T.</th>
+                                        <th style="width:100px; text-align:center">T.V.A.</th>
+                                        <th style="width:100px; text-align:center">T.T.C.</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (WineShop.Models.Basket item in WineShop.Models.Baskets.GetData())
+                        {
+                            <tr>
+                                <td>
+                                    <div class="product-item">
+                                        <a class="product-thumb" href="@Url.Action("Article", "Articles", new { @id = item.CodeProduct })"><img src="/Images/Shop/Products/@(item.CodeProduct).jpg" alt="Product"></a>
+                                        <div class="product-info">
+                                            <h4 class="product-title"><a href="@Url.Action("Article", "Articles", new { @id = item.CodeProduct })">@(item.Description)</a></h4><span><em>Size:</em> @(item.Size)</span><span><em>Color:</em> @(item.Color)</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center text-lg text-medium">@(item.Quantity)</td>
+                                <td class="text-center text-lg text-medium">@(item.UnitPrice.ToString(WineShop.Tools.Framework.PriceFormat)) @(WineShop.Tools.App.Currency.GetCurrent().Symbol)</td>
+                                <td class="text-center text-lg text-medium">@(item.AmountTotal.ToString(WineShop.Tools.Framework.PriceFormat)) @(WineShop.Tools.App.Currency.GetCurrent().Symbol)</td>
+                                <td class="text-center text-lg text-medium">@((item.VATRate * 100).ToString(WineShop.Tools.Framework.PercentFormat)) %</td>
+                                <td class="text-center text-lg text-medium">@(item.AmountATI.ToString(WineShop.Tools.Framework.PriceFormat)) @(WineShop.Tools.App.Currency.GetCurrent().Symbol)</td>
+                            </tr>
+            }
+
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="5">
+                                            <div class="text-right text-lg">Sous-total du panier : </div>
+                                            <div class="text-right text-lg">Tax Estimée : </div>
+                                            <div class="text-right text-lg">Total T.T.C. : </div>
+                                            <div class="text-right text-lg">Frais de Livraison : </div>
+                                            <div class="text-right text-lg">Net à payer : </div>
+                                        </td>
+                                        <td colspan="1">
+                                            <div class="text-right text-lg"><span class="text-medium">@WineShop.Models.Baskets.GetAmount() €</span></div>
+                                            <div class="text-right text-lg"><span class="text-medium">@WineShop.Models.Baskets.GetAmountVAT() €</span></div>
+                                            <div class="text-right text-lg"><span class="text-medium">@WineShop.Models.Baskets.GetAmountATI() €</span></div>
+                                            <div class="text-right text-lg"><span class="text-medium">@WineShop.Models.Baskets.GetAmountShipping() €</span></div>
+                                            <div class="text-right text-lg"><span class="text-medium">@WineShop.Models.Baskets.GetAmountATIFinal() €</span></div>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="row padding-top-1x mt-3">
+                            <div class="col-sm-6">
+                                @{
+                        WineShop.Models.Views.ModelCheckoutAddress checkoutAddressInvoice = (WineShop.Models.Views.ModelCheckoutAddress)Session["CheckoutAddressInvoice"];
+                        <h5>Facturé à:</h5>
+                        <ul class="list-unstyled">
+                            <li><span class="text-muted">Client:</span>@(checkoutAddressInvoice.LastName) @(checkoutAddressInvoice.FirstName)</li>
+                            <li><span class="text-muted">Adresse:</span>@(checkoutAddressInvoice.Address), @(checkoutAddressInvoice.ZipCode), @(checkoutAddressInvoice.City)</li>
+                            <li><span class="text-muted">Téléphone:</span>@(checkoutAddressInvoice.Phone)</li>
+                        </ul>
+                                }
+                            </div>
+                        </div>
+                        <div class="row padding-top-1x mt-3">
+                            <div class="col-sm-6">
+                                @{
+                        WineShop.Models.Views.ModelCheckoutAddress checkoutAddressDelivery = (WineShop.Models.Views.ModelCheckoutAddress)Session["CheckoutAddressDelivery"];
+                        <h5>Livré à:</h5>
+                        <ul class="list-unstyled">
+                            <li><span class="text-muted">Client:</span>@(checkoutAddressDelivery.LastName) @(checkoutAddressDelivery.FirstName)</li>
+                            <li><span class="text-muted">Adresse:</span>@(checkoutAddressDelivery.Address), @(checkoutAddressDelivery.ZipCode), @(checkoutAddressDelivery.City)</li>
+                            <li><span class="text-muted">Téléphone:</span>@(checkoutAddressDelivery.Phone)</li>
+                        </ul>
+                                }
+                            </div>
+                        </div>
+                        <div class="row padding-top-1x mt-3">
+                            <div class="col-sm-6">
+                                @{
+                        WineShop.Models.Views.ModelCheckoutPayment checkoutPayment = (WineShop.Models.Views.ModelCheckoutPayment)Session["CheckoutPayment"];
+                        <h5>Mode de Paiement:</h5>
+                        <ul class="list-unstyled">
+                            <li><span class="text-muted">Carte :</span> @(WineShop.Tools.App.GetPayment(checkoutPayment.PaymentMode))</li>
+                        </ul>
+                                }
+                            </div>
+                        </div>
+                        <div class="checkout-footer margin-top-1x">
+                            <div class="column hidden-xs-down"><a class="btn btn-outline-secondary" href="@Url.Action("CheckoutPayment","Home")"<i class="icon-arrow-left"></i>&nbsp;Retour</a></div>
+                            <div class="column"><button class="btn btn-primary" id="btnSubmit" type="button">Paiement</button></div>
+                        </div>
+                    </div>
+                    <!-- Sidebar          -->
+                    <div class="col-xl-3 col-lg-4 d-none">
+                        <aside class="sidebar">
+                            <div class="padding-top-2x hidden-lg-up"></div>
+                            <!-- Order Summary Widget-->
+                            <section class="widget widget-order-summary">
+                                <h3 class="widget-title">Resumé de votre commande</h3>
+                                <table class="table">
+
+
+                                    <tr>
+                                        <td>
+                                            Sous-total du panier:@WineShop.Models.Baskets.GetAmount() €
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tax Estimée:@WineShop.Models.Baskets.GetAmountVAT() €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total T.T.C.:@WineShop.Models.Baskets.GetAmountATI() €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Frais de Livraison: @WineShop.Models.Baskets.GetAmountShipping() €</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-lg text-medium">Net à payer : @WineShop.Models.Baskets.GetAmountATIFinal() € </td>
+                                    </tr>
+
+                                </table>
+                            </section>
+                            <!-- Featured Products Widget-->
+                            <!-- Promo Banner-->
+                        </aside>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Site Footer-->
+    </div>
+    <!-- Back To Top Button--><a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
+    <!-- Backdrop-->
+    <div class="site-backdrop"></div>
+    <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
+    <script src="js/vendor.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+</body>
+</html>

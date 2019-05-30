@@ -1,0 +1,69 @@
+﻿@{
+    WineShop.Models.Compagny compagny = WineShop.Tools.App.Compagny;
+    WineShop.Models.Customer customer = WineShop.Tools.Security.Customer.GetCurrent();
+}
+<div class="offcanvas-container" id="mobile-menu">
+    @if (customer == null)
+    {
+        <div class="account-link" href="#">
+            <a class="btn btn-primary" href="@Url.Action("CustomerLogin","Home")"><i class="icon-user"></i> Connexion</a>
+        </div>
+    }
+    else
+    {
+        <a class="account-link" href="@Url.Action("Profile","Profile")">
+            <div class="user-ava">
+                <img src="@Url.Action("ImageProfile", "Files")" alt="@customer.FullName">
+            </div>
+            <div class="user-info">
+                <h6 class="user-name">@Html.Raw(customer.FullName)</h6>
+            </div>
+        </a>
+    }
+    <nav class="offcanvas-menu">
+        <ul class="menu">
+            @foreach (WineShop.Models.NavLink item in WineShop.Models.NavLinks.GetData().Where(x => x.First == true).OrderBy(x => x.Id))
+            {
+                <li class="has-children">
+                    <a href="@Url.Action(item.ActionLink, item.ControllerLink)">
+                        <span>
+                            @{
+                                if (!string.IsNullOrEmpty(item.Symbol))
+                                {<i class="fa fa-@(item.Symbol)"></i>@Html.Raw("&nbsp;")}
+                            }
+                            @(item.Description)
+                        </span>
+                    </a>
+                </li>
+            }
+            @foreach (WineShop.Models.TypeCategory itemTypeCategory in WineShop.Models.TypeCategories.GetData().OrderBy(x => x.Id))
+            {
+                <li class="has-children">
+                    <span><a href="@Url.Action("Articles", "Articles", new { type = itemTypeCategory.Name })"><span>@(itemTypeCategory.Description)</span></a><span class="sub-menu-toggle"></span></span>
+                    <ul class="offcanvas-submenu">
+                        <li><a href="@Url.Action("Articles", "Articles", new { type = itemTypeCategory.Name })">@(itemTypeCategory.Description)</a></li>
+                        @foreach (WineShop.Models.Category itemCategory in WineShop.Models.Categories.GetDataByUidTypeCategory(itemTypeCategory.Uid))
+                        {
+                            <li class="has-children">
+                                <span><a href="@Url.Action("Articles", "Articles",new {type = itemTypeCategory.Name, category=itemCategory.Name })"><span>@(itemCategory.Description)</span></a><span class="sub-menu-toggle"></span></span>
+                                <ul class="offcanvas-submenu">
+                                    @foreach (WineShop.Models.SubCategory itemSubCategory in WineShop.Models.SubCategories.GetDataByUidCategory(itemCategory.Uid))
+                                    {
+                                        <li><a href="@Url.Action("Articles", "Articles", new{ @type= itemTypeCategory.Name, @categorie = itemCategory.Name, @subcategorie = itemSubCategory.Name})">@(itemSubCategory.Description)</a></li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </li>
+            }
+            @foreach (WineShop.Models.NavLink item in WineShop.Models.NavLinks.GetData().Where(x => x.First == false).OrderBy(x => x.Id))
+            {
+                <li class="has-children">
+                    <a href="@Url.Action(item.ActionLink, item.ControllerLink)"><span>@(item.Description)</span></a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>
+

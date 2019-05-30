@@ -1,0 +1,109 @@
+﻿@model WineShop.Models.Views.ModelCheckoutPayment
+<div class="page-title">
+    <div class="container">
+        <div class="column">
+            <h1>Validation Paiement</h1>
+        </div>
+        <div class="column">
+            <ul class="breadcrumbs">
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
+                <li class="separator">&nbsp;</li>
+                <li>Paiement</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Page Content-->
+<div class="container padding-bottom-3x mb-2">
+    @using (Html.BeginForm("CheckoutPayment", "Post", FormMethod.Post, new { @class = "login-box" }))
+    {
+        <div class="row">
+            <!-- Checkout Adress-->
+            <div class="col-xl-9 col-lg-8">
+                <div class="checkout-steps">
+                    <a>5. Résumé</a>
+                    <a class="active"><span class="angle"></span>4. Paiment</a>
+                    <a class="completed" href="@Url.Action("CheckoutShipping", "Home")"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>3. Mode Liv.</a>
+                    <a class="completed" href="@Url.Action("CheckoutAddressDelivery", "Home")"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>2. Adresse Liv.</a>
+                    <a class="completed" href="@Url.Action("CheckoutAddressInvoice", "Home")"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>1. Adresse Fac.</a>
+                </div>
+                <h4>Choisire un mode de paiement</h4>
+                <hr class="padding-bottom-1x">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="thead-default">
+                            <tr>
+                                <th>Mode de paiement</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="align-middle"><span class="text-medium">VISA</span><br><span class="text-muted text-sm">Paiement par carte Visa</span></td>
+                                <td class="align-middle text-right">
+                                    <label class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" name="PaymentMode" data-val="true" id="chkVisa" value=0  @(Model.PaymentMode.Equals(0)?"checked":"")><span class="custom-control-indicator"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle"><span class="text-medium">MASTERCARD</span><br><span class="text-muted text-sm">Paiement par carte Master Card</span></td>
+                                <td class="align-middle text-right">
+                                    <label class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" name="PaymentMode" data-val="true" id="chkMasterCard" value=1  @(Model.PaymentMode.Equals(1)?"checked":"")><span class="custom-control-indicator"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="align-middle"><span class="text-medium">AMERICAN EXPRESS</span><br><span class="text-muted text-sm">Paiement par carte American Express</span></td>
+                                <td class="align-middle text-right">
+                                    <label class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" name="PaymentMode" data-val="true" id="chkAmex" value=2  @(Model.PaymentMode.Equals(2)?"checked":"")><span class="custom-control-indicator"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="checkout-footer margin-top-1x">
+                    <div class="column"><a class="btn btn-outline-secondary" href="@Url.Action("CheckoutShipping","Home")"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;Retour au mode de livraison</span></a></div>
+                    <div class="column"><button class="btn btn-primary" type="submit"><span class="hidden-xs-down">Continue&nbsp;</span><i class="icon-arrow-right"></i></button></div>
+                </div>
+            </div>
+            <!-- Sidebar          -->
+            <div class="col-xl-3 col-lg-4">
+                <aside class="sidebar">
+                    <div class="padding-top-2x hidden-lg-up"></div>
+                    <!-- Order Summary Widget-->
+                    <section class="widget widget-order-summary">
+                        <h3 class="widget-title">Resumé de votre commande</h3>
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    Sous-total du panier:@WineShop.Models.Baskets.GetAmount() €
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tax Estimée:@WineShop.Models.Baskets.GetAmountVAT() €</td>
+                            </tr>
+                            <tr>
+                                <td>Total T.T.C.:@WineShop.Models.Baskets.GetAmountATI() €</td>
+                            </tr>
+                            <tr>
+                                <td>Frais de Livraison: @WineShop.Models.Baskets.GetAmountShipping() €</td>
+                            </tr>
+                            <tr>
+                                <td class="text-medium">Net à payer : @WineShop.Models.Baskets.GetAmountATIFinal() € </td>
+                            </tr>
+
+                        </table>
+                    </section>
+                    <!-- Featured Products Widget-->
+                    <!-- Promo Banner-->
+                </aside>
+            </div>
+        </div>
+    }
+</div>

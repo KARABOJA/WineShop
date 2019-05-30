@@ -1,0 +1,85 @@
+﻿@{
+    WineShop.Models.Compagny compagny = WineShop.Tools.App.Compagny;
+}
+
+
+<!-- Site Footer-->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-4">
+                <!-- Contact Info-->
+                <section class="widget widget-light-skin">
+                    <h3 class="widget-title">Contacts</h3>
+                    <ul class="list-unstyled text-sm text-white">
+                        <li><span class="opacity-50">Telephone:</span>@(compagny.Phone)</li>
+                        <li>&nbsp;</li>
+                        <li><span class="opacity-50">@(compagny.Days):</span>@(compagny.Hours)</li>
+                        <li>&nbsp;</li>
+                        <li><span class="opacity-50">Support:</span><a class="navi-link-light" href="mailto:@(compagny.Mail)">@(compagny.Mail)</a>
+                    </ul>
+                </section>
+            </div>
+            <div class="col col-lg-4">
+                <!-- Account / Shipping Info-->
+                <section class="widget widget-links widget-light-skin">
+                    <h3 class="widget-title">Compte &amp; Detail de livraison</h3>
+                    <ul>
+                        @foreach (var item in WineShop.Models.NavLinks.GetData())
+                {
+                    if (item.Enabled)
+                    {
+                        <li><a href="@Url.Action(item.ActionLink,item.ControllerLink)">@(item.Description)</a></li>
+            }
+        }
+                    </ul>
+                </section>
+            </div>
+            <!-- About Us<div class="col-lg-3 col-md-6">
+
+        <section class="widget widget-links widget-light-skin">
+            <h3 class="widget-title">à propos de nous</h3>
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </section>
+    </div>-->
+            @{
+                <div class="col col-lg-4">
+                    <!-- Account / Shipping Info-->
+                    <section class="widget widget-links widget-light-skin">
+                        <h3 class="widget-title">Reseaux Sociaux </h3>
+                        <ul>
+                            @foreach (WineShop.Models.SocialNetwork item in WineShop.Models.SocialsNetworks.GetData())
+                    {
+                        if (item.Enabled)
+                        {
+                            <li><a class="social-button shape-circle sb-@(item.Symbol) sb-light-skin" href="@(item.Url)" target="_blank"><i class="socicon-@(item.Symbol) "></i></a> @(item.Name)</li>
+                }
+            }
+                        </ul>
+                    </section>
+                </div>
+            }
+        </div>
+        <hr class="hr-light mt-2 margin-bottom-2x">
+        <div class="row">
+            <div class="col-md-7 padding-bottom-1x">
+                <!-- Payment Methods-->
+                <div class="margin-bottom-1x" style="max-width: 615px ;">
+                    <p class="footer-copyright">© Tous droits réservés. Développé avec &nbsp;<i class="icon-heart text-danger"></i><a href="https://www.google.fr/" target="_blank"> &nbsp;par J.A.D.E</a></p>
+                </div>
+            </div>
+            <div class="col-md-5 padding-bottom-1x">
+                <div class="margin-top-1x hidden-md-up"></div>
+                <!--Subscription-->
+                <img src="/Images/payment_methods.png" alt="Payment Methods">
+            </div>
+        </div>
+        <!-- Copyright-->
+    </div>
+</footer>

@@ -1,0 +1,88 @@
+﻿@model  WineShop.Models.Views.ModelLoginInscription
+<!-- Page Title-->
+<div class="page-title">
+    <div class="container">
+        <div class="column">
+            <h1>Connexion / Créer un compte</h1>
+        </div>
+        <div class="column">
+            <ul class="breadcrumbs">
+                <li>
+                    <a href="@Url.Action("Index","Home")">Accueil</a>
+                </li>
+                <li class="separator">&nbsp;</li>
+                <li>Connexion / Créer un compte</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Page Content-->
+<div class="container padding-bottom-3x mb-2">
+    <div class="row">
+        <div class="col-md-6">
+            @using (Html.BeginForm("CustomerConnection", "Post", FormMethod.Post, new { @class = "login-box" })){
+                <h4 class="margin-bottom-1x">Connexion</h4>
+                <div class="form-group input-group">
+                    @Html.TextBoxFor(Model=>Model.Login.Email, new { id = "txtEmail", @type = "email", @placeholder = "Email", @required="required", @class="form-control" })<span class="input-group-addon"><i class="icon-mail"></i></span>
+                </div>
+                <div class="form-group input-group">
+                    @Html.TextBoxFor(Model => Model.Login.Password, new { id = "txtPassword", @type = "password", @placeholder = "Password", @required = "required", @class = "form-control" })<span class="input-group-addon"><i class="icon-lock"></i></span>
+                </div>
+                <div class="d-flex flex-wrap justify-content-between padding-bottom-1x">
+                    <label class="custom-control custom-checkbox">
+                    </label><a class="navi-link" href="@Url.Action("PasswordRecovery","Home")">Mot de passe oublié ?</a>
+                </div>
+                <div class="text-center text-sm-right">
+                    <button class="btn btn-primary margin-bottom-none" type="submit">Connexion</button>
+                </div>
+            }
+        </div>
+        <div class="col-md-6">
+            <div class="padding-top-3x hidden-md-up"></div>
+            <h3 class="margin-bottom-1x">Créer un compte</h3>
+            <p>L'enregistrement prend moins d'une minute.</p>
+            @using (Html.BeginForm("RegisterCustomer", "Post", FormMethod.Post, new { @class = "row" }))
+            {
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="reg-fn">Prénom</label>
+                        @Html.TextBoxFor(Model => Model.Inscription.FirstName, new { id = "txtFirstName", @type = "text", @placeholder = "Prénom", @required = "required", @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="reg-ln">Nom</label>
+                        @Html.TextBoxFor(Model => Model.Inscription.LastName, new { id = "txtLastName", @type = "text", @placeholder = "Nom", @required = "required", @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="reg-email">Courriel</label>
+                        @Html.TextBoxFor(Model => Model.Inscription.Email, new { id = "txtEmail", @type = "email", @placeholder = "Courriel", @required = "required", @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="reg-phone">Téléphone</label>
+                        @Html.TextBoxFor(Model => Model.Inscription.Phone, new { id = "txtPhone", @type = "tel", @placeholder = "Téléphone", @required = "required", @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="reg-pass">Mot de passe</label>
+                        @Html.TextBoxFor(Model => Model.Inscription.Password, new { id = "txtPassword", @type = "password", @placeholder = "Mot de passe", @required = "required", @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="reg-pass-confirm">Confirmation</label>
+                        @Html.TextBoxFor(Model => Model.Inscription.ConfirmPassword, new { id = "txtConfirmPassword", @type = "password", @placeholder = "Confirmation", @required = "required", @class = "form-control" })
+                    </div>
+                </div>
+                <div class="col-12 text-center text-sm-right">
+                    <button class="btn btn-primary margin-bottom-none" type="submit">Enregistrer</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

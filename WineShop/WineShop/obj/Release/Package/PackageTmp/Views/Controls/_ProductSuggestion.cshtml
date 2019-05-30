@@ -1,0 +1,22 @@
+﻿@model WineShop.Models.Article
+<div class="grid-item">
+    <div class="product-card">
+        <div class="rating-stars">
+            @for (int iStar = 0; iStar < 5; iStar++)
+            {
+                if (iStar < (int)Model.Notes)
+                {<i class="icon-star filled"></i>}
+                else
+                {<i class="icon-star"></i>}
+            }
+        </div>
+        <a class="product-thumb" href="shop-single.html">
+            <img src="/Images/shop/products/03.jpg" alt="Product">
+        </a>
+        <h3 class="product-title"><a href="shop-single.html">@Model.Name</a></h3>
+        <h4 class="product-price">@Model.UnitPrice.ToString("0.00") @Model.CurrencySymbol</h4>
+        <div class="product-buttons">
+            <button class="btn btn-outline-primary btn-sm" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!">Add to Cart</button>
+        </div>
+    </div>
+</div>

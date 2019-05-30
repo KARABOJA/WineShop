@@ -1,0 +1,816 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetCustomerInvoice" targetNamespace="http://tempuri.org/DataSetCustomerInvoice.xsd" xmlns:mstns="http://tempuri.org/DataSetCustomerInvoice.xsd" xmlns="http://tempuri.org/DataSetCustomerInvoice.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="dbWineShopConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbWineShopConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.dbWineShopConnectionString.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwCustomerInvoiceTableAdapter" GeneratorDataComponentClassName="vwCustomerInvoiceTableAdapter" Name="vwCustomerInvoice" UserDataComponentName="vwCustomerInvoiceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbWineShopConnectionString (Web.config)" DbObjectName="dbWineShop.dbo.vwCustomerInvoice" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM vwCustomerInvoice</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Uid" DataSetColumn="Uid" />
+              <Mapping SourceColumn="UidUserCreate" DataSetColumn="UidUserCreate" />
+              <Mapping SourceColumn="UidUserUpdate" DataSetColumn="UidUserUpdate" />
+              <Mapping SourceColumn="DtCreate" DataSetColumn="DtCreate" />
+              <Mapping SourceColumn="DtUpdate" DataSetColumn="DtUpdate" />
+              <Mapping SourceColumn="Enabled" DataSetColumn="Enabled" />
+              <Mapping SourceColumn="UidCustomer" DataSetColumn="UidCustomer" />
+              <Mapping SourceColumn="NumInvoice" DataSetColumn="NumInvoice" />
+              <Mapping SourceColumn="NumCommand" DataSetColumn="NumCommand" />
+              <Mapping SourceColumn="InvoiceNameFirst" DataSetColumn="InvoiceNameFirst" />
+              <Mapping SourceColumn="InvoiceNameLast" DataSetColumn="InvoiceNameLast" />
+              <Mapping SourceColumn="InvoiceEmail" DataSetColumn="InvoiceEmail" />
+              <Mapping SourceColumn="InvoicePhone" DataSetColumn="InvoicePhone" />
+              <Mapping SourceColumn="InvoiceCompany" DataSetColumn="InvoiceCompany" />
+              <Mapping SourceColumn="InvoiceAddress" DataSetColumn="InvoiceAddress" />
+              <Mapping SourceColumn="InvoiceZipCode" DataSetColumn="InvoiceZipCode" />
+              <Mapping SourceColumn="InvoiceCity" DataSetColumn="InvoiceCity" />
+              <Mapping SourceColumn="InvoiceCountry" DataSetColumn="InvoiceCountry" />
+              <Mapping SourceColumn="DeliveryNameFirst" DataSetColumn="DeliveryNameFirst" />
+              <Mapping SourceColumn="DeliveryNameLast" DataSetColumn="DeliveryNameLast" />
+              <Mapping SourceColumn="DeliveryEmail" DataSetColumn="DeliveryEmail" />
+              <Mapping SourceColumn="DeliveryPhone" DataSetColumn="DeliveryPhone" />
+              <Mapping SourceColumn="DeliveryCompany" DataSetColumn="DeliveryCompany" />
+              <Mapping SourceColumn="DeliveryAddress" DataSetColumn="DeliveryAddress" />
+              <Mapping SourceColumn="DeliveryZipCode" DataSetColumn="DeliveryZipCode" />
+              <Mapping SourceColumn="DeliveryCity" DataSetColumn="DeliveryCity" />
+              <Mapping SourceColumn="DeliveryCountry" DataSetColumn="DeliveryCountry" />
+              <Mapping SourceColumn="DtOrdered" DataSetColumn="DtOrdered" />
+              <Mapping SourceColumn="DtShipped" DataSetColumn="DtShipped" />
+              <Mapping SourceColumn="State" DataSetColumn="State" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="AmountVAT" DataSetColumn="AmountVAT" />
+              <Mapping SourceColumn="AmountATI" DataSetColumn="AmountATI" />
+              <Mapping SourceColumn="AmountShipping" DataSetColumn="AmountShipping" />
+              <Mapping SourceColumn="AmountATIFinal" DataSetColumn="AmountATIFinal" />
+              <Mapping SourceColumn="UidCurrency" DataSetColumn="UidCurrency" />
+              <Mapping SourceColumn="CurrenctSymbole" DataSetColumn="CurrenctSymbole" />
+              <Mapping SourceColumn="CurrencyDescription" DataSetColumn="CurrencyDescription" />
+              <Mapping SourceColumn="CurrencyRate" DataSetColumn="CurrencyRate" />
+              <Mapping SourceColumn="ShippingMode" DataSetColumn="ShippingMode" />
+              <Mapping SourceColumn="PaymentMode" DataSetColumn="PaymentMode" />
+              <Mapping SourceColumn="StateDescription" DataSetColumn="StateDescription" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="dbWineShopConnectionString (Web.config)" DbObjectName="dbWineShop.dbo.vwCustomerInvoice" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByNumInvoice" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByNumInvoice" GeneratorSourceName="FillByNumInvoice" GetMethodModifier="Public" GetMethodName="GetDataByNumInvoice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByNumInvoice" UserSourceName="FillByNumInvoice">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM vwCustomerInvoice
+WHERE NumInvoice=?</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="NumInvoice" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="NumInvoice" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="NumInvoice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="dbWineShopConnectionString (Web.config)" DbObjectName="dbWineShop.dbo.vwCustomerInvoice" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByUidCustomer" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUidCustomer" GeneratorSourceName="FillByUidCustomer" GetMethodModifier="Public" GetMethodName="GetDataByUidCustomer" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUidCustomer" UserSourceName="FillByUidCustomer">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vwCustomerInvoice
+WHERE UidCustomer=?</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="UidCustomer" DataSourceName="dbWineShop.dbo.vwCustomerInvoice" DataTypeServer="uniqueidentifier" DbType="Object" Direction="Input" ParameterName="UidCustomer" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="1024" SourceColumn="UidCustomer" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbCustomerInvoiceDetailsTableAdapter" GeneratorDataComponentClassName="tbCustomerInvoiceDetailsTableAdapter" Name="tbCustomerInvoiceDetails" UserDataComponentName="tbCustomerInvoiceDetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbWineShopConnectionString (Web.config)" DbObjectName="dbWineShop.dbo.tbCustomerInvoiceDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [tbCustomerInvoiceDetails] WHERE (([Uid] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="Original_Uid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Uid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [tbCustomerInvoiceDetails] ([Uid], [UidUserCreate], [UidUserUpdate], [DtCreate], [DtUpdate], [Enabled], [UidCustomerInvoice], [UidCustomerCommand], [UidProduct], [UidCategoryType], [UidCategory], [UidCategorySub], [Name], [CodeProduct], [QuantityOrdered], [UidColor], [Color], [UidSize], [Size], [UnitPrice], [Amount], [VATRate], [AmountVAT], [AmountATI]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="Uid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Uid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidUserCreate" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidUserCreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidUserUpdate" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidUserUpdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="DtCreate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DtCreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="DtUpdate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DtUpdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Enabled" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Enabled" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCustomerInvoice" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCustomerInvoice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCustomerCommand" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCustomerCommand" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidProduct" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidProduct" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCategoryType" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCategoryType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCategory" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCategory" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCategorySub" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCategorySub" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="CodeProduct" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CodeProduct" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="QuantityOrdered" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityOrdered" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidColor" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidColor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Color" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Color" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidSize" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidSize" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Size" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Size" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="UnitPrice" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Amount" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Amount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="VATRate" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="VATRate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="AmountVAT" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="AmountVAT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="AmountATI" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="AmountATI" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        tbCustomerInvoiceDetails.*
+FROM            tbCustomerInvoiceDetails</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [tbCustomerInvoiceDetails] SET [Uid] = ?, [UidUserCreate] = ?, [UidUserUpdate] = ?, [DtCreate] = ?, [DtUpdate] = ?, [Enabled] = ?, [UidCustomerInvoice] = ?, [UidCustomerCommand] = ?, [UidProduct] = ?, [UidCategoryType] = ?, [UidCategory] = ?, [UidCategorySub] = ?, [Name] = ?, [CodeProduct] = ?, [QuantityOrdered] = ?, [UidColor] = ?, [Color] = ?, [UidSize] = ?, [Size] = ?, [UnitPrice] = ?, [Amount] = ?, [VATRate] = ?, [AmountVAT] = ?, [AmountATI] = ? WHERE (([Uid] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="Uid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Uid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidUserCreate" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidUserCreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidUserUpdate" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidUserUpdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="DtCreate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DtCreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="DtUpdate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DtUpdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Enabled" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Enabled" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCustomerInvoice" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCustomerInvoice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCustomerCommand" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCustomerCommand" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidProduct" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidProduct" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCategoryType" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCategoryType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCategory" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCategory" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCategorySub" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCategorySub" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="CodeProduct" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CodeProduct" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="QuantityOrdered" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="QuantityOrdered" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidColor" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidColor" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Color" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Color" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidSize" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidSize" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Size" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Size" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="UnitPrice" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="UnitPrice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Amount" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Amount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="VATRate" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="VATRate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="AmountVAT" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="AmountVAT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="AmountATI" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="AmountATI" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="Original_Uid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Uid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Uid" DataSetColumn="Uid" />
+              <Mapping SourceColumn="UidUserCreate" DataSetColumn="UidUserCreate" />
+              <Mapping SourceColumn="UidUserUpdate" DataSetColumn="UidUserUpdate" />
+              <Mapping SourceColumn="DtCreate" DataSetColumn="DtCreate" />
+              <Mapping SourceColumn="DtUpdate" DataSetColumn="DtUpdate" />
+              <Mapping SourceColumn="Enabled" DataSetColumn="Enabled" />
+              <Mapping SourceColumn="UidCustomerInvoice" DataSetColumn="UidCustomerInvoice" />
+              <Mapping SourceColumn="UidCustomerCommand" DataSetColumn="UidCustomerCommand" />
+              <Mapping SourceColumn="UidProduct" DataSetColumn="UidProduct" />
+              <Mapping SourceColumn="UidCategoryType" DataSetColumn="UidCategoryType" />
+              <Mapping SourceColumn="UidCategory" DataSetColumn="UidCategory" />
+              <Mapping SourceColumn="UidCategorySub" DataSetColumn="UidCategorySub" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="CodeProduct" DataSetColumn="CodeProduct" />
+              <Mapping SourceColumn="QuantityOrdered" DataSetColumn="QuantityOrdered" />
+              <Mapping SourceColumn="UidColor" DataSetColumn="UidColor" />
+              <Mapping SourceColumn="Color" DataSetColumn="Color" />
+              <Mapping SourceColumn="UidSize" DataSetColumn="UidSize" />
+              <Mapping SourceColumn="Size" DataSetColumn="Size" />
+              <Mapping SourceColumn="UnitPrice" DataSetColumn="UnitPrice" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="VATRate" DataSetColumn="VATRate" />
+              <Mapping SourceColumn="AmountVAT" DataSetColumn="AmountVAT" />
+              <Mapping SourceColumn="AmountATI" DataSetColumn="AmountATI" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="dbWineShopConnectionString (Web.config)" DbObjectName="dbWineShop.dbo.tbCustomerInvoiceDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByUidCustomerInvoice" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUidCustomerInvoice" GeneratorSourceName="FillByUidCustomerInvoice" GetMethodModifier="Public" GetMethodName="GetDataByUidCustomerInvoice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUidCustomerInvoice" UserSourceName="FillByUidCustomerInvoice">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Amount, AmountATI, AmountVAT, CodeProduct, Color, DtCreate, DtUpdate, Enabled, Name, QuantityOrdered, [Size], Uid, UidCategory, UidCategorySub, UidCategoryType, UidColor, UidCustomerCommand, UidCustomerInvoice, UidProduct, UidSize, UidUserCreate, UidUserUpdate, UnitPrice, VATRate FROM tbCustomerInvoiceDetails WHERE (UidCustomerInvoice = ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="UidCustomerInvoice" DataSourceName="" DataTypeServer="uniqueidentifier" DbType="Object" Direction="Input" ParameterName="UidCustomerInvoice" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="1024" SourceColumn="UidCustomerInvoice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbCustomerInvoiceTableAdapter" GeneratorDataComponentClassName="tbCustomerInvoiceTableAdapter" Name="tbCustomerInvoice" UserDataComponentName="tbCustomerInvoiceTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbWineShopConnectionString (Web.config)" DbObjectName="dbWineShop.dbo.tbCustomerInvoice" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [tbCustomerInvoice] WHERE (([Uid] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="Original_Uid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Uid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [tbCustomerInvoice] ([Uid], [UidUserCreate], [UidUserUpdate], [DtCreate], [DtUpdate], [Enabled], [UidCustomer], [NumInvoice], [NumCommand], [InvoiceNameFirst], [InvoiceNameLast], [InvoiceEmail], [InvoicePhone], [InvoiceCompany], [InvoiceAddress], [InvoiceZipCode], [InvoiceCity], [InvoiceCountry], [DeliveryNameFirst], [DeliveryNameLast], [DeliveryEmail], [DeliveryPhone], [DeliveryCompany], [DeliveryAddress], [DeliveryZipCode], [DeliveryCity], [DeliveryCountry], [DtOrdered], [DtShipped], [State], [Amount], [AmountVAT], [AmountATI], [AmountShipping], [AmountATIFinal], [UidCurrency], [CurrenctSymbole], [CurrencyDescription], [CurrencyRate], [ShippingMode], [PaymentMode]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="Uid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Uid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidUserCreate" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidUserCreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidUserUpdate" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidUserUpdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="DtCreate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DtCreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="DtUpdate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DtUpdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Enabled" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Enabled" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCustomer" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCustomer" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="NumInvoice" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumInvoice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="NumCommand" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumCommand" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceNameFirst" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceNameFirst" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceNameLast" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceNameLast" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceEmail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceEmail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoicePhone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoicePhone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceCompany" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceCompany" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceAddress" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceAddress" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceZipCode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceZipCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceCity" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceCity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceCountry" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceCountry" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryNameFirst" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryNameFirst" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryNameLast" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryNameLast" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryEmail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryEmail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryPhone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryPhone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryCompany" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryCompany" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryAddress" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryAddress" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryZipCode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryZipCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryCity" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryCity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryCountry" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryCountry" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="DtOrdered" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DtOrdered" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="DtShipped" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DtShipped" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="State" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="State" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Amount" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Amount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="AmountVAT" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="AmountVAT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="AmountATI" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="AmountATI" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="AmountShipping" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="AmountShipping" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="AmountATIFinal" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="AmountATIFinal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCurrency" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCurrency" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="CurrenctSymbole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CurrenctSymbole" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="CurrencyDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CurrencyDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="CurrencyRate" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="CurrencyRate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="ShippingMode" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="ShippingMode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="PaymentMode" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="PaymentMode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        tbCustomerInvoice.*
+FROM            tbCustomerInvoice</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [tbCustomerInvoice] SET [Uid] = ?, [UidUserCreate] = ?, [UidUserUpdate] = ?, [DtCreate] = ?, [DtUpdate] = ?, [Enabled] = ?, [UidCustomer] = ?, [NumInvoice] = ?, [NumCommand] = ?, [InvoiceNameFirst] = ?, [InvoiceNameLast] = ?, [InvoiceEmail] = ?, [InvoicePhone] = ?, [InvoiceCompany] = ?, [InvoiceAddress] = ?, [InvoiceZipCode] = ?, [InvoiceCity] = ?, [InvoiceCountry] = ?, [DeliveryNameFirst] = ?, [DeliveryNameLast] = ?, [DeliveryEmail] = ?, [DeliveryPhone] = ?, [DeliveryCompany] = ?, [DeliveryAddress] = ?, [DeliveryZipCode] = ?, [DeliveryCity] = ?, [DeliveryCountry] = ?, [DtOrdered] = ?, [DtShipped] = ?, [State] = ?, [Amount] = ?, [AmountVAT] = ?, [AmountATI] = ?, [AmountShipping] = ?, [AmountATIFinal] = ?, [UidCurrency] = ?, [CurrenctSymbole] = ?, [CurrencyDescription] = ?, [CurrencyRate] = ?, [ShippingMode] = ?, [PaymentMode] = ? WHERE (([Uid] = ?))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="Uid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Uid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidUserCreate" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidUserCreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidUserUpdate" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidUserUpdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="DtCreate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DtCreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="DtUpdate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DtUpdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="Enabled" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Enabled" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCustomer" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCustomer" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="NumInvoice" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumInvoice" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="NumCommand" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumCommand" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceNameFirst" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceNameFirst" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceNameLast" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceNameLast" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceEmail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceEmail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoicePhone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoicePhone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceCompany" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceCompany" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceAddress" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceAddress" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceZipCode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceZipCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceCity" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceCity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="InvoiceCountry" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InvoiceCountry" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryNameFirst" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryNameFirst" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryNameLast" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryNameLast" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryEmail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryEmail" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryPhone" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryPhone" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryCompany" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryCompany" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryAddress" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryAddress" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryZipCode" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryZipCode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryCity" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryCity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="DeliveryCountry" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DeliveryCountry" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="DtOrdered" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DtOrdered" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="DtShipped" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DtShipped" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int16" Direction="Input" ParameterName="State" Precision="0" ProviderType="SmallInt" Scale="0" Size="0" SourceColumn="State" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="Amount" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="Amount" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="AmountVAT" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="AmountVAT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="AmountATI" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="AmountATI" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="AmountShipping" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="AmountShipping" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="AmountATIFinal" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="AmountATIFinal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="UidCurrency" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="UidCurrency" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="CurrenctSymbole" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CurrenctSymbole" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="CurrencyDescription" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CurrencyDescription" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="CurrencyRate" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="CurrencyRate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="ShippingMode" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="ShippingMode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="PaymentMode" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="PaymentMode" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Guid" Direction="Input" ParameterName="Original_Uid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="0" SourceColumn="Uid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Uid" DataSetColumn="Uid" />
+              <Mapping SourceColumn="UidUserCreate" DataSetColumn="UidUserCreate" />
+              <Mapping SourceColumn="UidUserUpdate" DataSetColumn="UidUserUpdate" />
+              <Mapping SourceColumn="DtCreate" DataSetColumn="DtCreate" />
+              <Mapping SourceColumn="DtUpdate" DataSetColumn="DtUpdate" />
+              <Mapping SourceColumn="Enabled" DataSetColumn="Enabled" />
+              <Mapping SourceColumn="UidCustomer" DataSetColumn="UidCustomer" />
+              <Mapping SourceColumn="NumInvoice" DataSetColumn="NumInvoice" />
+              <Mapping SourceColumn="NumCommand" DataSetColumn="NumCommand" />
+              <Mapping SourceColumn="InvoiceNameFirst" DataSetColumn="InvoiceNameFirst" />
+              <Mapping SourceColumn="InvoiceNameLast" DataSetColumn="InvoiceNameLast" />
+              <Mapping SourceColumn="InvoiceEmail" DataSetColumn="InvoiceEmail" />
+              <Mapping SourceColumn="InvoicePhone" DataSetColumn="InvoicePhone" />
+              <Mapping SourceColumn="InvoiceCompany" DataSetColumn="InvoiceCompany" />
+              <Mapping SourceColumn="InvoiceAddress" DataSetColumn="InvoiceAddress" />
+              <Mapping SourceColumn="InvoiceZipCode" DataSetColumn="InvoiceZipCode" />
+              <Mapping SourceColumn="InvoiceCity" DataSetColumn="InvoiceCity" />
+              <Mapping SourceColumn="InvoiceCountry" DataSetColumn="InvoiceCountry" />
+              <Mapping SourceColumn="DeliveryNameFirst" DataSetColumn="DeliveryNameFirst" />
+              <Mapping SourceColumn="DeliveryNameLast" DataSetColumn="DeliveryNameLast" />
+              <Mapping SourceColumn="DeliveryEmail" DataSetColumn="DeliveryEmail" />
+              <Mapping SourceColumn="DeliveryPhone" DataSetColumn="DeliveryPhone" />
+              <Mapping SourceColumn="DeliveryCompany" DataSetColumn="DeliveryCompany" />
+              <Mapping SourceColumn="DeliveryAddress" DataSetColumn="DeliveryAddress" />
+              <Mapping SourceColumn="DeliveryZipCode" DataSetColumn="DeliveryZipCode" />
+              <Mapping SourceColumn="DeliveryCity" DataSetColumn="DeliveryCity" />
+              <Mapping SourceColumn="DeliveryCountry" DataSetColumn="DeliveryCountry" />
+              <Mapping SourceColumn="DtOrdered" DataSetColumn="DtOrdered" />
+              <Mapping SourceColumn="DtShipped" DataSetColumn="DtShipped" />
+              <Mapping SourceColumn="State" DataSetColumn="State" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="AmountVAT" DataSetColumn="AmountVAT" />
+              <Mapping SourceColumn="AmountATI" DataSetColumn="AmountATI" />
+              <Mapping SourceColumn="AmountShipping" DataSetColumn="AmountShipping" />
+              <Mapping SourceColumn="AmountATIFinal" DataSetColumn="AmountATIFinal" />
+              <Mapping SourceColumn="UidCurrency" DataSetColumn="UidCurrency" />
+              <Mapping SourceColumn="CurrenctSymbole" DataSetColumn="CurrenctSymbole" />
+              <Mapping SourceColumn="CurrencyDescription" DataSetColumn="CurrencyDescription" />
+              <Mapping SourceColumn="CurrencyRate" DataSetColumn="CurrencyRate" />
+              <Mapping SourceColumn="ShippingMode" DataSetColumn="ShippingMode" />
+              <Mapping SourceColumn="PaymentMode" DataSetColumn="PaymentMode" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetCustomerInvoice" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetCustomerInvoice" msprop:Generator_UserDSName="DataSetCustomerInvoice">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwCustomerInvoice" msprop:Generator_TableClassName="vwCustomerInvoiceDataTable" msprop:Generator_TableVarName="tablevwCustomerInvoice" msprop:Generator_TablePropName="vwCustomerInvoice" msprop:Generator_RowDeletingName="vwCustomerInvoiceRowDeleting" msprop:Generator_RowChangingName="vwCustomerInvoiceRowChanging" msprop:Generator_RowEvHandlerName="vwCustomerInvoiceRowChangeEventHandler" msprop:Generator_RowDeletedName="vwCustomerInvoiceRowDeleted" msprop:Generator_UserTableName="vwCustomerInvoice" msprop:Generator_RowChangedName="vwCustomerInvoiceRowChanged" msprop:Generator_RowEvArgName="vwCustomerInvoiceRowChangeEvent" msprop:Generator_RowClassName="vwCustomerInvoiceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Uid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUid" msprop:Generator_ColumnPropNameInRow="Uid" msprop:Generator_ColumnPropNameInTable="UidColumn" msprop:Generator_UserColumnName="Uid" type="xs:string" />
+              <xs:element name="UidUserCreate" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidUserCreate" msprop:Generator_ColumnPropNameInRow="UidUserCreate" msprop:Generator_ColumnPropNameInTable="UidUserCreateColumn" msprop:Generator_UserColumnName="UidUserCreate" type="xs:string" />
+              <xs:element name="UidUserUpdate" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidUserUpdate" msprop:Generator_ColumnPropNameInRow="UidUserUpdate" msprop:Generator_ColumnPropNameInTable="UidUserUpdateColumn" msprop:Generator_UserColumnName="UidUserUpdate" type="xs:string" />
+              <xs:element name="DtCreate" msprop:Generator_ColumnVarNameInTable="columnDtCreate" msprop:Generator_ColumnPropNameInRow="DtCreate" msprop:Generator_ColumnPropNameInTable="DtCreateColumn" msprop:Generator_UserColumnName="DtCreate" type="xs:dateTime" />
+              <xs:element name="DtUpdate" msprop:Generator_ColumnVarNameInTable="columnDtUpdate" msprop:Generator_ColumnPropNameInRow="DtUpdate" msprop:Generator_ColumnPropNameInTable="DtUpdateColumn" msprop:Generator_UserColumnName="DtUpdate" type="xs:dateTime" />
+              <xs:element name="Enabled" msprop:Generator_ColumnVarNameInTable="columnEnabled" msprop:Generator_ColumnPropNameInRow="Enabled" msprop:Generator_ColumnPropNameInTable="EnabledColumn" msprop:Generator_UserColumnName="Enabled" type="xs:boolean" />
+              <xs:element name="UidCustomer" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCustomer" msprop:Generator_ColumnPropNameInRow="UidCustomer" msprop:Generator_ColumnPropNameInTable="UidCustomerColumn" msprop:Generator_UserColumnName="UidCustomer" type="xs:string" />
+              <xs:element name="NumInvoice" msprop:Generator_ColumnVarNameInTable="columnNumInvoice" msprop:Generator_ColumnPropNameInRow="NumInvoice" msprop:Generator_ColumnPropNameInTable="NumInvoiceColumn" msprop:Generator_UserColumnName="NumInvoice">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumCommand" msprop:Generator_ColumnVarNameInTable="columnNumCommand" msprop:Generator_ColumnPropNameInRow="NumCommand" msprop:Generator_ColumnPropNameInTable="NumCommandColumn" msprop:Generator_UserColumnName="NumCommand">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceNameFirst" msprop:Generator_ColumnVarNameInTable="columnInvoiceNameFirst" msprop:Generator_ColumnPropNameInRow="InvoiceNameFirst" msprop:Generator_ColumnPropNameInTable="InvoiceNameFirstColumn" msprop:Generator_UserColumnName="InvoiceNameFirst">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceNameLast" msprop:Generator_ColumnVarNameInTable="columnInvoiceNameLast" msprop:Generator_ColumnPropNameInRow="InvoiceNameLast" msprop:Generator_ColumnPropNameInTable="InvoiceNameLastColumn" msprop:Generator_UserColumnName="InvoiceNameLast">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceEmail" msprop:Generator_ColumnVarNameInTable="columnInvoiceEmail" msprop:Generator_ColumnPropNameInRow="InvoiceEmail" msprop:Generator_ColumnPropNameInTable="InvoiceEmailColumn" msprop:Generator_UserColumnName="InvoiceEmail">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoicePhone" msprop:Generator_ColumnVarNameInTable="columnInvoicePhone" msprop:Generator_ColumnPropNameInRow="InvoicePhone" msprop:Generator_ColumnPropNameInTable="InvoicePhoneColumn" msprop:Generator_UserColumnName="InvoicePhone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceCompany" msprop:Generator_ColumnVarNameInTable="columnInvoiceCompany" msprop:Generator_ColumnPropNameInRow="InvoiceCompany" msprop:Generator_ColumnPropNameInTable="InvoiceCompanyColumn" msprop:Generator_UserColumnName="InvoiceCompany">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceAddress" msprop:Generator_ColumnVarNameInTable="columnInvoiceAddress" msprop:Generator_ColumnPropNameInRow="InvoiceAddress" msprop:Generator_ColumnPropNameInTable="InvoiceAddressColumn" msprop:Generator_UserColumnName="InvoiceAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceZipCode" msprop:Generator_ColumnVarNameInTable="columnInvoiceZipCode" msprop:Generator_ColumnPropNameInRow="InvoiceZipCode" msprop:Generator_ColumnPropNameInTable="InvoiceZipCodeColumn" msprop:Generator_UserColumnName="InvoiceZipCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceCity" msprop:Generator_ColumnVarNameInTable="columnInvoiceCity" msprop:Generator_ColumnPropNameInRow="InvoiceCity" msprop:Generator_ColumnPropNameInTable="InvoiceCityColumn" msprop:Generator_UserColumnName="InvoiceCity">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceCountry" msprop:Generator_ColumnVarNameInTable="columnInvoiceCountry" msprop:Generator_ColumnPropNameInRow="InvoiceCountry" msprop:Generator_ColumnPropNameInTable="InvoiceCountryColumn" msprop:Generator_UserColumnName="InvoiceCountry">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryNameFirst" msprop:Generator_ColumnVarNameInTable="columnDeliveryNameFirst" msprop:Generator_ColumnPropNameInRow="DeliveryNameFirst" msprop:Generator_ColumnPropNameInTable="DeliveryNameFirstColumn" msprop:Generator_UserColumnName="DeliveryNameFirst">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryNameLast" msprop:Generator_ColumnVarNameInTable="columnDeliveryNameLast" msprop:Generator_ColumnPropNameInRow="DeliveryNameLast" msprop:Generator_ColumnPropNameInTable="DeliveryNameLastColumn" msprop:Generator_UserColumnName="DeliveryNameLast">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryEmail" msprop:Generator_ColumnVarNameInTable="columnDeliveryEmail" msprop:Generator_ColumnPropNameInRow="DeliveryEmail" msprop:Generator_ColumnPropNameInTable="DeliveryEmailColumn" msprop:Generator_UserColumnName="DeliveryEmail">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryPhone" msprop:Generator_ColumnVarNameInTable="columnDeliveryPhone" msprop:Generator_ColumnPropNameInRow="DeliveryPhone" msprop:Generator_ColumnPropNameInTable="DeliveryPhoneColumn" msprop:Generator_UserColumnName="DeliveryPhone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryCompany" msprop:Generator_ColumnVarNameInTable="columnDeliveryCompany" msprop:Generator_ColumnPropNameInRow="DeliveryCompany" msprop:Generator_ColumnPropNameInTable="DeliveryCompanyColumn" msprop:Generator_UserColumnName="DeliveryCompany">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryAddress" msprop:Generator_ColumnVarNameInTable="columnDeliveryAddress" msprop:Generator_ColumnPropNameInRow="DeliveryAddress" msprop:Generator_ColumnPropNameInTable="DeliveryAddressColumn" msprop:Generator_UserColumnName="DeliveryAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryZipCode" msprop:Generator_ColumnVarNameInTable="columnDeliveryZipCode" msprop:Generator_ColumnPropNameInRow="DeliveryZipCode" msprop:Generator_ColumnPropNameInTable="DeliveryZipCodeColumn" msprop:Generator_UserColumnName="DeliveryZipCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryCity" msprop:Generator_ColumnVarNameInTable="columnDeliveryCity" msprop:Generator_ColumnPropNameInRow="DeliveryCity" msprop:Generator_ColumnPropNameInTable="DeliveryCityColumn" msprop:Generator_UserColumnName="DeliveryCity">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryCountry" msprop:Generator_ColumnVarNameInTable="columnDeliveryCountry" msprop:Generator_ColumnPropNameInRow="DeliveryCountry" msprop:Generator_ColumnPropNameInTable="DeliveryCountryColumn" msprop:Generator_UserColumnName="DeliveryCountry">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DtOrdered" msprop:Generator_ColumnVarNameInTable="columnDtOrdered" msprop:Generator_ColumnPropNameInRow="DtOrdered" msprop:Generator_ColumnPropNameInTable="DtOrderedColumn" msprop:Generator_UserColumnName="DtOrdered" type="xs:dateTime" />
+              <xs:element name="DtShipped" msprop:Generator_ColumnVarNameInTable="columnDtShipped" msprop:Generator_ColumnPropNameInRow="DtShipped" msprop:Generator_ColumnPropNameInTable="DtShippedColumn" msprop:Generator_UserColumnName="DtShipped" type="xs:dateTime" />
+              <xs:element name="State" msprop:Generator_ColumnVarNameInTable="columnState" msprop:Generator_ColumnPropNameInRow="State" msprop:Generator_ColumnPropNameInTable="StateColumn" msprop:Generator_UserColumnName="State" type="xs:short" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:double" />
+              <xs:element name="AmountVAT" msprop:Generator_ColumnVarNameInTable="columnAmountVAT" msprop:Generator_ColumnPropNameInRow="AmountVAT" msprop:Generator_ColumnPropNameInTable="AmountVATColumn" msprop:Generator_UserColumnName="AmountVAT" type="xs:double" />
+              <xs:element name="AmountATI" msprop:Generator_ColumnVarNameInTable="columnAmountATI" msprop:Generator_ColumnPropNameInRow="AmountATI" msprop:Generator_ColumnPropNameInTable="AmountATIColumn" msprop:Generator_UserColumnName="AmountATI" type="xs:double" />
+              <xs:element name="AmountShipping" msprop:Generator_ColumnVarNameInTable="columnAmountShipping" msprop:Generator_ColumnPropNameInRow="AmountShipping" msprop:Generator_ColumnPropNameInTable="AmountShippingColumn" msprop:Generator_UserColumnName="AmountShipping" type="xs:double" />
+              <xs:element name="AmountATIFinal" msprop:Generator_ColumnVarNameInTable="columnAmountATIFinal" msprop:Generator_ColumnPropNameInRow="AmountATIFinal" msprop:Generator_ColumnPropNameInTable="AmountATIFinalColumn" msprop:Generator_UserColumnName="AmountATIFinal" type="xs:double" />
+              <xs:element name="UidCurrency" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCurrency" msprop:Generator_ColumnPropNameInRow="UidCurrency" msprop:Generator_ColumnPropNameInTable="UidCurrencyColumn" msprop:Generator_UserColumnName="UidCurrency" type="xs:string" />
+              <xs:element name="CurrenctSymbole" msprop:Generator_ColumnVarNameInTable="columnCurrenctSymbole" msprop:Generator_ColumnPropNameInRow="CurrenctSymbole" msprop:Generator_ColumnPropNameInTable="CurrenctSymboleColumn" msprop:Generator_UserColumnName="CurrenctSymbole">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CurrencyDescription" msprop:Generator_ColumnVarNameInTable="columnCurrencyDescription" msprop:Generator_ColumnPropNameInRow="CurrencyDescription" msprop:Generator_ColumnPropNameInTable="CurrencyDescriptionColumn" msprop:Generator_UserColumnName="CurrencyDescription">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CurrencyRate" msprop:Generator_ColumnVarNameInTable="columnCurrencyRate" msprop:Generator_ColumnPropNameInRow="CurrencyRate" msprop:Generator_ColumnPropNameInTable="CurrencyRateColumn" msprop:Generator_UserColumnName="CurrencyRate" type="xs:double" />
+              <xs:element name="ShippingMode" msprop:Generator_ColumnVarNameInTable="columnShippingMode" msprop:Generator_ColumnPropNameInRow="ShippingMode" msprop:Generator_ColumnPropNameInTable="ShippingModeColumn" msprop:Generator_UserColumnName="ShippingMode" type="xs:unsignedByte" />
+              <xs:element name="PaymentMode" msprop:Generator_ColumnVarNameInTable="columnPaymentMode" msprop:Generator_ColumnPropNameInRow="PaymentMode" msprop:Generator_ColumnPropNameInTable="PaymentModeColumn" msprop:Generator_UserColumnName="PaymentMode" type="xs:unsignedByte" />
+              <xs:element name="StateDescription" msprop:Generator_ColumnVarNameInTable="columnStateDescription" msprop:Generator_ColumnPropNameInRow="StateDescription" msprop:Generator_ColumnPropNameInTable="StateDescriptionColumn" msprop:Generator_UserColumnName="StateDescription">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbCustomerInvoiceDetails" msprop:Generator_TableClassName="tbCustomerInvoiceDetailsDataTable" msprop:Generator_TableVarName="tabletbCustomerInvoiceDetails" msprop:Generator_TablePropName="tbCustomerInvoiceDetails" msprop:Generator_RowDeletingName="tbCustomerInvoiceDetailsRowDeleting" msprop:Generator_RowChangingName="tbCustomerInvoiceDetailsRowChanging" msprop:Generator_RowEvHandlerName="tbCustomerInvoiceDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="tbCustomerInvoiceDetailsRowDeleted" msprop:Generator_UserTableName="tbCustomerInvoiceDetails" msprop:Generator_RowChangedName="tbCustomerInvoiceDetailsRowChanged" msprop:Generator_RowEvArgName="tbCustomerInvoiceDetailsRowChangeEvent" msprop:Generator_RowClassName="tbCustomerInvoiceDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Uid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUid" msprop:Generator_ColumnPropNameInRow="Uid" msprop:Generator_ColumnPropNameInTable="UidColumn" msprop:Generator_UserColumnName="Uid" type="xs:string" />
+              <xs:element name="UidUserCreate" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidUserCreate" msprop:Generator_ColumnPropNameInRow="UidUserCreate" msprop:Generator_ColumnPropNameInTable="UidUserCreateColumn" msprop:Generator_UserColumnName="UidUserCreate" type="xs:string" />
+              <xs:element name="UidUserUpdate" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidUserUpdate" msprop:Generator_ColumnPropNameInRow="UidUserUpdate" msprop:Generator_ColumnPropNameInTable="UidUserUpdateColumn" msprop:Generator_UserColumnName="UidUserUpdate" type="xs:string" />
+              <xs:element name="DtCreate" msprop:Generator_ColumnVarNameInTable="columnDtCreate" msprop:Generator_ColumnPropNameInRow="DtCreate" msprop:Generator_ColumnPropNameInTable="DtCreateColumn" msprop:Generator_UserColumnName="DtCreate" type="xs:dateTime" />
+              <xs:element name="DtUpdate" msprop:Generator_ColumnVarNameInTable="columnDtUpdate" msprop:Generator_ColumnPropNameInRow="DtUpdate" msprop:Generator_ColumnPropNameInTable="DtUpdateColumn" msprop:Generator_UserColumnName="DtUpdate" type="xs:dateTime" />
+              <xs:element name="Enabled" msprop:Generator_ColumnVarNameInTable="columnEnabled" msprop:Generator_ColumnPropNameInRow="Enabled" msprop:Generator_ColumnPropNameInTable="EnabledColumn" msprop:Generator_UserColumnName="Enabled" type="xs:boolean" />
+              <xs:element name="UidCustomerInvoice" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCustomerInvoice" msprop:Generator_ColumnPropNameInRow="UidCustomerInvoice" msprop:Generator_ColumnPropNameInTable="UidCustomerInvoiceColumn" msprop:Generator_UserColumnName="UidCustomerInvoice" type="xs:string" />
+              <xs:element name="UidCustomerCommand" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCustomerCommand" msprop:Generator_ColumnPropNameInRow="UidCustomerCommand" msprop:Generator_ColumnPropNameInTable="UidCustomerCommandColumn" msprop:Generator_UserColumnName="UidCustomerCommand" type="xs:string" />
+              <xs:element name="UidProduct" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidProduct" msprop:Generator_ColumnPropNameInRow="UidProduct" msprop:Generator_ColumnPropNameInTable="UidProductColumn" msprop:Generator_UserColumnName="UidProduct" type="xs:string" />
+              <xs:element name="UidCategoryType" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCategoryType" msprop:Generator_ColumnPropNameInRow="UidCategoryType" msprop:Generator_ColumnPropNameInTable="UidCategoryTypeColumn" msprop:Generator_UserColumnName="UidCategoryType" type="xs:string" />
+              <xs:element name="UidCategory" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCategory" msprop:Generator_ColumnPropNameInRow="UidCategory" msprop:Generator_ColumnPropNameInTable="UidCategoryColumn" msprop:Generator_UserColumnName="UidCategory" type="xs:string" />
+              <xs:element name="UidCategorySub" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCategorySub" msprop:Generator_ColumnPropNameInRow="UidCategorySub" msprop:Generator_ColumnPropNameInTable="UidCategorySubColumn" msprop:Generator_UserColumnName="UidCategorySub" type="xs:string" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodeProduct" msprop:Generator_ColumnVarNameInTable="columnCodeProduct" msprop:Generator_ColumnPropNameInRow="CodeProduct" msprop:Generator_ColumnPropNameInTable="CodeProductColumn" msprop:Generator_UserColumnName="CodeProduct">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QuantityOrdered" msprop:Generator_ColumnVarNameInTable="columnQuantityOrdered" msprop:Generator_ColumnPropNameInRow="QuantityOrdered" msprop:Generator_ColumnPropNameInTable="QuantityOrderedColumn" msprop:Generator_UserColumnName="QuantityOrdered" type="xs:int" />
+              <xs:element name="UidColor" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidColor" msprop:Generator_ColumnPropNameInRow="UidColor" msprop:Generator_ColumnPropNameInTable="UidColorColumn" msprop:Generator_UserColumnName="UidColor" type="xs:string" />
+              <xs:element name="Color" msprop:Generator_ColumnVarNameInTable="columnColor" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_UserColumnName="Color">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UidSize" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidSize" msprop:Generator_ColumnPropNameInRow="UidSize" msprop:Generator_ColumnPropNameInTable="UidSizeColumn" msprop:Generator_UserColumnName="UidSize" type="xs:string" />
+              <xs:element name="Size" msprop:Generator_ColumnVarNameInTable="columnSize" msprop:Generator_ColumnPropNameInRow="Size" msprop:Generator_ColumnPropNameInTable="SizeColumn" msprop:Generator_UserColumnName="Size">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnitPrice" msprop:Generator_ColumnVarNameInTable="columnUnitPrice" msprop:Generator_ColumnPropNameInRow="UnitPrice" msprop:Generator_ColumnPropNameInTable="UnitPriceColumn" msprop:Generator_UserColumnName="UnitPrice" type="xs:double" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:double" />
+              <xs:element name="VATRate" msprop:Generator_ColumnVarNameInTable="columnVATRate" msprop:Generator_ColumnPropNameInRow="VATRate" msprop:Generator_ColumnPropNameInTable="VATRateColumn" msprop:Generator_UserColumnName="VATRate" type="xs:double" />
+              <xs:element name="AmountVAT" msprop:Generator_ColumnVarNameInTable="columnAmountVAT" msprop:Generator_ColumnPropNameInRow="AmountVAT" msprop:Generator_ColumnPropNameInTable="AmountVATColumn" msprop:Generator_UserColumnName="AmountVAT" type="xs:double" />
+              <xs:element name="AmountATI" msprop:Generator_ColumnVarNameInTable="columnAmountATI" msprop:Generator_ColumnPropNameInRow="AmountATI" msprop:Generator_ColumnPropNameInTable="AmountATIColumn" msprop:Generator_UserColumnName="AmountATI" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbCustomerInvoice" msprop:Generator_TableClassName="tbCustomerInvoiceDataTable" msprop:Generator_TableVarName="tabletbCustomerInvoice" msprop:Generator_TablePropName="tbCustomerInvoice" msprop:Generator_RowDeletingName="tbCustomerInvoiceRowDeleting" msprop:Generator_RowChangingName="tbCustomerInvoiceRowChanging" msprop:Generator_RowEvHandlerName="tbCustomerInvoiceRowChangeEventHandler" msprop:Generator_RowDeletedName="tbCustomerInvoiceRowDeleted" msprop:Generator_UserTableName="tbCustomerInvoice" msprop:Generator_RowChangedName="tbCustomerInvoiceRowChanged" msprop:Generator_RowEvArgName="tbCustomerInvoiceRowChangeEvent" msprop:Generator_RowClassName="tbCustomerInvoiceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Uid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUid" msprop:Generator_ColumnPropNameInRow="Uid" msprop:Generator_ColumnPropNameInTable="UidColumn" msprop:Generator_UserColumnName="Uid" type="xs:string" />
+              <xs:element name="UidUserCreate" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidUserCreate" msprop:Generator_ColumnPropNameInRow="UidUserCreate" msprop:Generator_ColumnPropNameInTable="UidUserCreateColumn" msprop:Generator_UserColumnName="UidUserCreate" type="xs:string" />
+              <xs:element name="UidUserUpdate" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidUserUpdate" msprop:Generator_ColumnPropNameInRow="UidUserUpdate" msprop:Generator_ColumnPropNameInTable="UidUserUpdateColumn" msprop:Generator_UserColumnName="UidUserUpdate" type="xs:string" />
+              <xs:element name="DtCreate" msprop:Generator_ColumnVarNameInTable="columnDtCreate" msprop:Generator_ColumnPropNameInRow="DtCreate" msprop:Generator_ColumnPropNameInTable="DtCreateColumn" msprop:Generator_UserColumnName="DtCreate" type="xs:dateTime" />
+              <xs:element name="DtUpdate" msprop:Generator_ColumnVarNameInTable="columnDtUpdate" msprop:Generator_ColumnPropNameInRow="DtUpdate" msprop:Generator_ColumnPropNameInTable="DtUpdateColumn" msprop:Generator_UserColumnName="DtUpdate" type="xs:dateTime" />
+              <xs:element name="Enabled" msprop:Generator_ColumnVarNameInTable="columnEnabled" msprop:Generator_ColumnPropNameInRow="Enabled" msprop:Generator_ColumnPropNameInTable="EnabledColumn" msprop:Generator_UserColumnName="Enabled" type="xs:boolean" />
+              <xs:element name="UidCustomer" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCustomer" msprop:Generator_ColumnPropNameInRow="UidCustomer" msprop:Generator_ColumnPropNameInTable="UidCustomerColumn" msprop:Generator_UserColumnName="UidCustomer" type="xs:string" />
+              <xs:element name="NumInvoice" msprop:Generator_ColumnVarNameInTable="columnNumInvoice" msprop:Generator_ColumnPropNameInRow="NumInvoice" msprop:Generator_ColumnPropNameInTable="NumInvoiceColumn" msprop:Generator_UserColumnName="NumInvoice">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumCommand" msprop:Generator_ColumnVarNameInTable="columnNumCommand" msprop:Generator_ColumnPropNameInRow="NumCommand" msprop:Generator_ColumnPropNameInTable="NumCommandColumn" msprop:Generator_UserColumnName="NumCommand">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceNameFirst" msprop:Generator_ColumnVarNameInTable="columnInvoiceNameFirst" msprop:Generator_ColumnPropNameInRow="InvoiceNameFirst" msprop:Generator_ColumnPropNameInTable="InvoiceNameFirstColumn" msprop:Generator_UserColumnName="InvoiceNameFirst">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceNameLast" msprop:Generator_ColumnVarNameInTable="columnInvoiceNameLast" msprop:Generator_ColumnPropNameInRow="InvoiceNameLast" msprop:Generator_ColumnPropNameInTable="InvoiceNameLastColumn" msprop:Generator_UserColumnName="InvoiceNameLast">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceEmail" msprop:Generator_ColumnVarNameInTable="columnInvoiceEmail" msprop:Generator_ColumnPropNameInRow="InvoiceEmail" msprop:Generator_ColumnPropNameInTable="InvoiceEmailColumn" msprop:Generator_UserColumnName="InvoiceEmail">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoicePhone" msprop:Generator_ColumnVarNameInTable="columnInvoicePhone" msprop:Generator_ColumnPropNameInRow="InvoicePhone" msprop:Generator_ColumnPropNameInTable="InvoicePhoneColumn" msprop:Generator_UserColumnName="InvoicePhone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceCompany" msprop:Generator_ColumnVarNameInTable="columnInvoiceCompany" msprop:Generator_ColumnPropNameInRow="InvoiceCompany" msprop:Generator_ColumnPropNameInTable="InvoiceCompanyColumn" msprop:Generator_UserColumnName="InvoiceCompany">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceAddress" msprop:Generator_ColumnVarNameInTable="columnInvoiceAddress" msprop:Generator_ColumnPropNameInRow="InvoiceAddress" msprop:Generator_ColumnPropNameInTable="InvoiceAddressColumn" msprop:Generator_UserColumnName="InvoiceAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceZipCode" msprop:Generator_ColumnVarNameInTable="columnInvoiceZipCode" msprop:Generator_ColumnPropNameInRow="InvoiceZipCode" msprop:Generator_ColumnPropNameInTable="InvoiceZipCodeColumn" msprop:Generator_UserColumnName="InvoiceZipCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceCity" msprop:Generator_ColumnVarNameInTable="columnInvoiceCity" msprop:Generator_ColumnPropNameInRow="InvoiceCity" msprop:Generator_ColumnPropNameInTable="InvoiceCityColumn" msprop:Generator_UserColumnName="InvoiceCity">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InvoiceCountry" msprop:Generator_ColumnVarNameInTable="columnInvoiceCountry" msprop:Generator_ColumnPropNameInRow="InvoiceCountry" msprop:Generator_ColumnPropNameInTable="InvoiceCountryColumn" msprop:Generator_UserColumnName="InvoiceCountry">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryNameFirst" msprop:Generator_ColumnVarNameInTable="columnDeliveryNameFirst" msprop:Generator_ColumnPropNameInRow="DeliveryNameFirst" msprop:Generator_ColumnPropNameInTable="DeliveryNameFirstColumn" msprop:Generator_UserColumnName="DeliveryNameFirst">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryNameLast" msprop:Generator_ColumnVarNameInTable="columnDeliveryNameLast" msprop:Generator_ColumnPropNameInRow="DeliveryNameLast" msprop:Generator_ColumnPropNameInTable="DeliveryNameLastColumn" msprop:Generator_UserColumnName="DeliveryNameLast">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryEmail" msprop:Generator_ColumnVarNameInTable="columnDeliveryEmail" msprop:Generator_ColumnPropNameInRow="DeliveryEmail" msprop:Generator_ColumnPropNameInTable="DeliveryEmailColumn" msprop:Generator_UserColumnName="DeliveryEmail">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryPhone" msprop:Generator_ColumnVarNameInTable="columnDeliveryPhone" msprop:Generator_ColumnPropNameInRow="DeliveryPhone" msprop:Generator_ColumnPropNameInTable="DeliveryPhoneColumn" msprop:Generator_UserColumnName="DeliveryPhone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryCompany" msprop:Generator_ColumnVarNameInTable="columnDeliveryCompany" msprop:Generator_ColumnPropNameInRow="DeliveryCompany" msprop:Generator_ColumnPropNameInTable="DeliveryCompanyColumn" msprop:Generator_UserColumnName="DeliveryCompany">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryAddress" msprop:Generator_ColumnVarNameInTable="columnDeliveryAddress" msprop:Generator_ColumnPropNameInRow="DeliveryAddress" msprop:Generator_ColumnPropNameInTable="DeliveryAddressColumn" msprop:Generator_UserColumnName="DeliveryAddress">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryZipCode" msprop:Generator_ColumnVarNameInTable="columnDeliveryZipCode" msprop:Generator_ColumnPropNameInRow="DeliveryZipCode" msprop:Generator_ColumnPropNameInTable="DeliveryZipCodeColumn" msprop:Generator_UserColumnName="DeliveryZipCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryCity" msprop:Generator_ColumnVarNameInTable="columnDeliveryCity" msprop:Generator_ColumnPropNameInRow="DeliveryCity" msprop:Generator_ColumnPropNameInTable="DeliveryCityColumn" msprop:Generator_UserColumnName="DeliveryCity">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeliveryCountry" msprop:Generator_ColumnVarNameInTable="columnDeliveryCountry" msprop:Generator_ColumnPropNameInRow="DeliveryCountry" msprop:Generator_ColumnPropNameInTable="DeliveryCountryColumn" msprop:Generator_UserColumnName="DeliveryCountry">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DtOrdered" msprop:Generator_ColumnVarNameInTable="columnDtOrdered" msprop:Generator_ColumnPropNameInRow="DtOrdered" msprop:Generator_ColumnPropNameInTable="DtOrderedColumn" msprop:Generator_UserColumnName="DtOrdered" type="xs:dateTime" />
+              <xs:element name="DtShipped" msprop:Generator_ColumnVarNameInTable="columnDtShipped" msprop:Generator_ColumnPropNameInRow="DtShipped" msprop:Generator_ColumnPropNameInTable="DtShippedColumn" msprop:Generator_UserColumnName="DtShipped" type="xs:dateTime" />
+              <xs:element name="State" msprop:Generator_ColumnVarNameInTable="columnState" msprop:Generator_ColumnPropNameInRow="State" msprop:Generator_ColumnPropNameInTable="StateColumn" msprop:Generator_UserColumnName="State" type="xs:short" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:double" />
+              <xs:element name="AmountVAT" msprop:Generator_ColumnVarNameInTable="columnAmountVAT" msprop:Generator_ColumnPropNameInRow="AmountVAT" msprop:Generator_ColumnPropNameInTable="AmountVATColumn" msprop:Generator_UserColumnName="AmountVAT" type="xs:double" />
+              <xs:element name="AmountATI" msprop:Generator_ColumnVarNameInTable="columnAmountATI" msprop:Generator_ColumnPropNameInRow="AmountATI" msprop:Generator_ColumnPropNameInTable="AmountATIColumn" msprop:Generator_UserColumnName="AmountATI" type="xs:double" />
+              <xs:element name="AmountShipping" msprop:Generator_ColumnVarNameInTable="columnAmountShipping" msprop:Generator_ColumnPropNameInRow="AmountShipping" msprop:Generator_ColumnPropNameInTable="AmountShippingColumn" msprop:Generator_UserColumnName="AmountShipping" type="xs:double" />
+              <xs:element name="AmountATIFinal" msprop:Generator_ColumnVarNameInTable="columnAmountATIFinal" msprop:Generator_ColumnPropNameInRow="AmountATIFinal" msprop:Generator_ColumnPropNameInTable="AmountATIFinalColumn" msprop:Generator_UserColumnName="AmountATIFinal" type="xs:double" />
+              <xs:element name="UidCurrency" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCurrency" msprop:Generator_ColumnPropNameInRow="UidCurrency" msprop:Generator_ColumnPropNameInTable="UidCurrencyColumn" msprop:Generator_UserColumnName="UidCurrency" type="xs:string" />
+              <xs:element name="CurrenctSymbole" msprop:Generator_ColumnVarNameInTable="columnCurrenctSymbole" msprop:Generator_ColumnPropNameInRow="CurrenctSymbole" msprop:Generator_ColumnPropNameInTable="CurrenctSymboleColumn" msprop:Generator_UserColumnName="CurrenctSymbole">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CurrencyDescription" msprop:Generator_ColumnVarNameInTable="columnCurrencyDescription" msprop:Generator_ColumnPropNameInRow="CurrencyDescription" msprop:Generator_ColumnPropNameInTable="CurrencyDescriptionColumn" msprop:Generator_UserColumnName="CurrencyDescription">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CurrencyRate" msprop:Generator_ColumnVarNameInTable="columnCurrencyRate" msprop:Generator_ColumnPropNameInRow="CurrencyRate" msprop:Generator_ColumnPropNameInTable="CurrencyRateColumn" msprop:Generator_UserColumnName="CurrencyRate" type="xs:double" />
+              <xs:element name="ShippingMode" msprop:Generator_ColumnVarNameInTable="columnShippingMode" msprop:Generator_ColumnPropNameInRow="ShippingMode" msprop:Generator_ColumnPropNameInTable="ShippingModeColumn" msprop:Generator_UserColumnName="ShippingMode" type="xs:unsignedByte" />
+              <xs:element name="PaymentMode" msprop:Generator_ColumnVarNameInTable="columnPaymentMode" msprop:Generator_ColumnPropNameInRow="PaymentMode" msprop:Generator_ColumnPropNameInTable="PaymentModeColumn" msprop:Generator_UserColumnName="PaymentMode" type="xs:unsignedByte" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwCustomerInvoice" />
+      <xs:field xpath="mstns:Uid" />
+    </xs:unique>
+    <xs:unique name="tbCustomerInvoiceDetails_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbCustomerInvoiceDetails" />
+      <xs:field xpath="mstns:Uid" />
+    </xs:unique>
+    <xs:unique name="tbCustomerInvoice_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbCustomerInvoice" />
+      <xs:field xpath="mstns:Uid" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,29 @@
+﻿<!-- Widget Categories-->
+<section class="widget widget-categories">
+    <h3 class="widget-title">Categories</h3>
+    <ul>
+        @foreach (WineShop.Models.TypeCategory itemTypeCategory in WineShop.Models.TypeCategories.GetData())
+        {
+        <li class="has-children expanded">
+            <a href="@Url.Action("Articles", "Articles", new{ @type= itemTypeCategory.Name, @categorie="", @subcategorie="" })">@(itemTypeCategory.Description)</a><span>(@WineShop.Models.TypeCategories.CountArticlesByUid(itemTypeCategory.Uid))</span>
+            <ul>
+                @foreach (WineShop.Models.Category itemCategory in WineShop.Models.Categories.GetDataByUidTypeCategory(itemTypeCategory.Uid))
+                    {
+                        <li>
+                            <a href="@Url.Action("Articles", "Articles", new{ @type= itemTypeCategory.Name, @categorie = itemCategory.Name, @subcategorie=""})">@(itemCategory.Description)</a><span>(@WineShop.Models.Categories.CountArticlesByUid(itemCategory.Uid))</span>
+                            <ul>
+                                @{
+                                    foreach (WineShop.Models.SubCategory itemSubCategory in WineShop.Models.SubCategories.GetDataByUidCategory(itemCategory.Uid))
+                                    {
+                                        <li><a href="@Url.Action("Articles", "Articles", new{ @type= itemTypeCategory.Name, @categorie = itemCategory.Name, @subcategorie = itemSubCategory.Name})">@(itemSubCategory.Name)</a><span>(@WineShop.Models.SubCategories.CountArticlesByUid(itemSubCategory.Uid))</span></li>
+                                    }
+                                }
+                            </ul>
+                        </li>
+                    }
+                
+            </ul>
+        </li>
+        }
+    </ul>
+</section>

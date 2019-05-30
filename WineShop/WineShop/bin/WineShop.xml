@@ -1,0 +1,1982 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WineShop</name>
+    </assembly>
+    <members>
+        <member name="M:WineShop.Tools.App.Currency.GetCurrent">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WineShop.Tools.App.Currency.SetCurrent(System.Guid,System.Int32,System.String,System.String,System.String,System.Double,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="uid">Unique identifiant de la devise</param>
+            <param name="idfc">Id de fonction de la devise</param>
+            <param name="name">Nom de la devise</param>
+            <param name="symbol">Symbole de la devise</param>
+            <param name="description">Description de la devise</param>
+            <param name="rate">Taux de la devise</param>
+            <param name="enabled">Etat activé de la devise</param>
+        </member>
+        <member name="M:WineShop.Tools.App.Language.GetCurrent">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:WineShop.Tools.App.Compagny">
+            <summary>
+            test 
+            </summary>
+        </member>
+        <member name="M:WineShop.Tools.Security.Customer.GetCurrent">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticle">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticle.vwColorDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticle.vwArticleDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticle.vwArticlexDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticle.vwColorRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticle.vwArticleRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticle.vwArticlexRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticle.vwColorRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticle.vwArticleRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticle.vwArticlexRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticleTableAdapters.vwColorTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticleTableAdapters.vwArticleTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticleTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetArticleTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetArticle,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetArticleTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetArticle,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetArticleTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetArticle,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetArticleTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetArticleTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetArticle)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticleTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetArticleTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetBasket">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetBasket.tbBasketDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetBasket.tbBasketRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetBasket.tbBasketRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetBasketTableAdapters.tbBasketTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetBasketTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetBasketTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetBasket,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetBasketTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetBasket,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetBasketTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetBasket,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetBasketTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetBasketTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetBasket)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetBasketTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetBasketTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategoryType_XDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategorySub_XDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategory_XDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategoryTop_XDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.tbCategorySubDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.tbCategoryDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.tbCategoryTypeDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategoryTopDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategoryType_XRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategorySub_XRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategory_XRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategoryTop_XRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.tbCategorySubRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.tbCategoryRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.tbCategoryTypeRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategoryTopRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategoryType_XRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategorySub_XRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategory_XRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategoryTop_XRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.tbCategorySubRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.tbCategoryRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.tbCategoryTypeRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategory.vwCategoryTopRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.vwCategoryType_XTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.vwCategorySub_XTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.vwCategory_XTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.vwCategoryTop_XTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.tbCategorySubTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.tbCategoryTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.tbCategoryTypeTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.vwCategoryTopTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetCategory,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetCategory,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetCategory,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetCategory)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCategoryTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetColor">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetColor.tbColorDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetColor.tbColorRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetColor.tbColorRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetColorTableAdapters.tbColorTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetColorTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetColorTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetColor,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetColorTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetColor,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetColorTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetColor,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetColorTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetColorTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetColor)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetColorTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetColorTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCompagny">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCompagny.tbCompagnyDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCompagny.tbCompagnyRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCompagny.tbCompagnyRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCompagnyTableAdapters.tbCompagnyTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCompagnyTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCompagnyTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetCompagny,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCompagnyTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetCompagny,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCompagnyTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetCompagny,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCompagnyTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCompagnyTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetCompagny)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCompagnyTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCompagnyTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCurrency">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCurrency.tbCurrencyDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCurrency.tbCurrencyRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCurrency.tbCurrencyRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCurrencyTableAdapters.tbCurrencyTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCurrencyTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCurrencyTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetCurrency,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCurrencyTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetCurrency,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCurrencyTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetCurrency,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCurrencyTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCurrencyTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetCurrency)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCurrencyTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCurrencyTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommand">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommand.vwCustomerCommandDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommand.tbCustomerCommandDetailsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommand.tbCustomerCommandDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommand.vwCustomerCommandRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommand.tbCustomerCommandDetailsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommand.tbCustomerCommandRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommand.vwCustomerCommandRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommand.tbCustomerCommandDetailsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommand.tbCustomerCommandRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommandTableAdapters.vwCustomerCommandTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommandTableAdapters.tbCustomerCommandDetailsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommandTableAdapters.tbCustomerCommandTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommandTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerCommandTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetCustomerCommand,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerCommandTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetCustomerCommand,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerCommandTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetCustomerCommand,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerCommandTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerCommandTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetCustomerCommand)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommandTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerCommandTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetLanguage">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetLanguage.tbLanguageDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetLanguage.tbLanguageRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetLanguage.tbLanguageRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetLanguageTableAdapters.tbLanguageTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetLanguageTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetLanguageTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetLanguage,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetLanguageTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetLanguage,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetLanguageTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetLanguage,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetLanguageTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetLanguageTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetLanguage)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetLanguageTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetLanguageTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetNavLink">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetNavLink.tbNavLinkDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetNavLink.tbNavLinkRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetNavLink.tbNavLinkRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetNavLinkTableAdapters.tbNavLinkTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetNavLinkTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetNavLinkTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetNavLink,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetNavLinkTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetNavLink,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetNavLinkTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetNavLink,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetNavLinkTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetNavLinkTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetNavLink)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetNavLinkTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetNavLinkTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetOrder">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetOrder.tbCustomerCommandDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetOrder.tbCustomerCommandRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetOrder.tbCustomerCommandRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetOrderTableAdapters.tbCustomerCommandTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetOrderTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetOrderTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetOrder,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetOrderTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetOrder,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetOrderTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetOrder,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetOrderTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetOrderTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetOrder)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetOrderTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetOrderTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParams">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParams.tbParamsOldDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParams.tbTranslateDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParams.tbParamsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParams.tbParamsOldRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParams.tbTranslateRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParams.tbParamsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParams.tbParamsOldRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParams.tbTranslateRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParams.tbParamsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParamsTableAdapters.tbParamsOldTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParamsTableAdapters.tbTranslateTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParamsTableAdapters.tbParamsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParamsTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetParamsTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetParams,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetParamsTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetParams,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetParamsTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetParams,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetParamsTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetParamsTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetParams)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParamsTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetParamsTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSize">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSize.tbSizeDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSize.tbSizeRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSize.tbSizeRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSizeTableAdapters.tbSizeTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSizeTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetSizeTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetSize,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetSizeTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetSize,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetSizeTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetSize,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetSizeTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetSizeTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetSize)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSizeTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSizeTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSocialNetwork">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSocialNetwork.tbSocialNetworkDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSocialNetwork.tbSocialNetworkRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSocialNetwork.tbSocialNetworkRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSocialNetworkTableAdapters.tbSocialNetworkTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSocialNetworkTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetSocialNetworkTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetSocialNetwork,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetSocialNetworkTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetSocialNetwork,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetSocialNetworkTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetSocialNetwork,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetSocialNetworkTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetSocialNetworkTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetSocialNetwork)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSocialNetworkTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetSocialNetworkTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerCommandDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerAdressDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerInvoiceDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerDeliveryDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerCommandRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerAdressRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerInvoiceRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerDeliveryRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerCommandRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerAdressRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerInvoiceRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerDeliveryRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomer.tbCustomerRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerTableAdapters.tbCustomerCommandTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerTableAdapters.tbCustomerAdressTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerTableAdapters.tbCustomerInvoiceTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerTableAdapters.tbCustomerDeliveryTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerTableAdapters.tbCustomerTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetCustomer,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetCustomer,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetCustomer,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetCustomer)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerInvoice">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerInvoice.tbCustomerInvoiceDetailsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerInvoice.tbCustomerInvoiceDetailsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerInvoice.tbCustomerInvoiceDetailsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerInvoiceTableAdapters.tbCustomerInvoiceDetailsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerInvoiceTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerInvoiceTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetCustomerInvoice,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerInvoiceTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetCustomerInvoice,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerInvoiceTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetCustomerInvoice,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerInvoiceTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerInvoiceTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetCustomerInvoice)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerInvoiceTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerInvoiceTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerDelivery">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerDelivery.tbCustomerDeliveryDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerDelivery.tbCustomerDeliveryDetailsDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerDelivery.tbCustomerDeliveryRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerDelivery.tbCustomerDeliveryDetailsRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerDelivery.tbCustomerDeliveryRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerDelivery.tbCustomerDeliveryDetailsRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerDeliveryTableAdapters.tbCustomerDeliveryTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerDeliveryTableAdapters.tbCustomerDeliveryDetailsTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerDeliveryTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerDeliveryTableAdapters.TableAdapterManager.UpdateUpdatedRows(WineShop.Datas.Ecommerce.DataSetCustomerDelivery,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerDeliveryTableAdapters.TableAdapterManager.UpdateInsertedRows(WineShop.Datas.Ecommerce.DataSetCustomerDelivery,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerDeliveryTableAdapters.TableAdapterManager.UpdateDeletedRows(WineShop.Datas.Ecommerce.DataSetCustomerDelivery,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerDeliveryTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WineShop.Datas.Ecommerce.DataSetCustomerDeliveryTableAdapters.TableAdapterManager.UpdateAll(WineShop.Datas.Ecommerce.DataSetCustomerDelivery)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerDeliveryTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WineShop.Datas.Ecommerce.DataSetCustomerDeliveryTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Color.Idfc">
+            <summary>
+            Id de fonction de la devise
+            </summary>
+        </member>
+        <member name="M:WineShop.Models.Color.#ctor">
+            <summary>
+            Constructeur
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Category.Uid">
+            <summary>
+            Unique identifiant
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Category.UidTypeCategory">
+            <summary>
+            Unique identifiant
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Category.Id">
+            <summary>
+            Unique identifiant
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Category.Name">
+            <summary>
+            Nom des types
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Category.Description">
+            <summary>
+            Description des types
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Category.Enabled">
+            <summary>
+            Obtient ou définit l'activation de TypeCategory
+            </summary>
+        </member>
+        <member name="T:WineShop.Models.Article">
+            <summary>
+             Description complète de la classe Article. 
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:WineShop.Models.Article.Uid" -->
+        <member name="P:WineShop.Models.Article.UidCategoryType">
+            <summary>
+            Récupère la valeur de TypeCategorieUid 
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.UidCategory">
+            <summary>
+            Récupère la valeur de CategorieUid 
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.UidCategorySub">
+            <summary>
+            Récupère la valeur de SubCategorieUid 
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.UidColor">
+            <summary>
+            Récupère la valeur de ColorUid
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.UidSize">
+            <summary>
+            Récupère la valeur de SizeUid 
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.UidCurrency">
+            <summary>
+            Récupère la valeur de CurrencyUid
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.Description">
+            <summary>
+            Récupère la valeur de Description
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.Notes">
+            <summary>
+            Récupère la valeur de Notes
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.Name">
+            <summary>
+            Récupère la valeur de Name
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.UnitPrice">
+            <summary>
+            Récupère la valeur de UnitPrice
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.UnitPriceATI">
+            <summary>
+            Récupère la valeur de UnitPrice
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.Size">
+            <summary>
+            Récupère la valeur de Size
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.Color">
+            <summary>
+            Récupère la valeur de Color
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.Images">
+            <summary>
+            Récupère la valeur de Images
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.Favorit">
+            <summary>
+            Récupère la valeur de Favorit
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.CurrencyDescription">
+            <summary>
+            Récupère la valeur de CurrencyDescription
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.CurrencySymbol">
+            <summary>
+            Récupère la valeur de CurrencySymbol
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.CodeProduct">
+            <summary>
+            Récupère la valeur de CodeProduct
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Article.Enabled">
+            <summary>
+            Récupère la valeur de Enabled
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Basket.UidProduct">
+            <summary>
+            Récupère la valeur de SizeUid 
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Basket.UidCategoryType">
+            <summary>
+            Récupère la valeur de SizeUid 
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Basket.UidCategory">
+            <summary>
+            Récupère la valeur de SizeUid 
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Basket.UidCategorySub">
+            <summary>
+            Récupère la valeur de SizeUid 
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Basket.UidSize">
+            <summary>
+            Récupère la valeur de SizeUid 
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Basket.UidColor">
+            <summary>
+            Récupère la valeur de ColorUid
+            </summary>
+        </member>
+        <member name="T:WineShop.Models.Connection">
+            <summary>
+            Connexion
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Connection.Uid">
+            <summary>
+            Unique identifiant du profil de connection
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Connection.Name">
+            <summary>
+            Nom du profile de connection
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Connection.FirstName">
+            <summary>
+            prenom du profil de connection
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Connection.FullName">
+            <summary>
+            nom entier du profil de connection
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Connection.Profil">
+             <summary>
+            detail du profile
+             </summary>
+        </member>
+        <member name="P:WineShop.Models.Connection.Enabled">
+            <summary>
+            Etat activé du profile
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Connection.Session">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Views.Contact.Uid">
+            <summary>
+            Unique identifiant du contact
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Views.Contact.NameLast">
+            <summary>
+            Nom du contact
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Views.Contact.NameFirst">
+            <summary>
+            Prenom du contact
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Views.Contact.Mail">
+            <summary>
+            Mail du contact
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Views.Contact.Phone">
+            <summary>
+            telephone du contact
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Views.Contact.Compagny">
+            <summary>
+            nom de la société
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Views.Contact.Country">
+            <summary>
+            Pays du contact
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Views.Contact.City">
+             <summary>
+            Ville du contact
+             </summary>
+        </member>
+        <member name="P:WineShop.Models.Views.Contact.Subject">
+            <summary>
+            Object du mail
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Views.Contact.Message">
+            <summary>
+            Detail du message
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Views.Contact.Enabled">
+            <summary>
+            Etat activé du profile
+            </summary>
+        </member>
+        <member name="T:WineShop.Models.Currencies">
+            <summary>
+            Class Devises
+            </summary>
+        </member>
+        <member name="M:WineShop.Models.Currencies.GetData">
+            <summary>
+            Methode de test
+            </summary>
+        </member>
+        <member name="T:WineShop.Models.Currency">
+            <summary>
+            Devise
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Currency.Uid">
+            <summary>
+            Unique identifiant de la devise
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Currency.Idfc">
+            <summary>
+            Id de fonction de la devise
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Currency.Name">
+            <summary>
+            Nom de la devise
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Currency.Symbol">
+            <summary>
+            Symbole de la devise
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Currency.Description">
+            <summary>
+            Description de la devise
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Currency.Rate">
+            <summary>
+            Taux de la devise
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Currency.Enabled">
+            <summary>
+            Etat activé de la devise
+            </summary>
+        </member>
+        <member name="M:WineShop.Models.Currency.#ctor">
+            <summary>
+            Constructeur
+            </summary>
+        </member>
+        <member name="M:WineShop.Models.Currency.#ctor(System.Guid,System.Int32,System.String,System.String,System.String,System.Double,System.Boolean)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="uid">Unique identifiant de la devise</param>
+            <param name="idfc">Id de fonction de la devise</param>
+            <param name="name">Nom de la devise</param>
+            <param name="symbol">Symbole de la devise</param>
+            <param name="description">Description de la devise</param>
+            <param name="rate">Taux de la devise</param>
+            <param name="enabled">Etat activé de la devise</param>
+        </member>
+        <member name="P:WineShop.Models.Language.Idfc">
+            <summary>
+            Id de fonction de la devise
+            </summary>
+        </member>
+        <member name="M:WineShop.Models.Language.#ctor">
+            <summary>
+            Constructeur
+            </summary>
+        </member>
+        <member name="T:WineShop.Models.Compagny">
+            <summary>
+            Société
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Compagny.Uid">
+            <summary>
+            Unique identifiant de la société
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Compagny.Name">
+            <summary>
+            Nom de la société
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Compagny.Address">
+            <summary>
+            Adresse de la société
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Compagny.Phone">
+            <summary>
+            Telephone de la société
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Compagny.Mail">
+            <summary>
+            Mail de la société
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Compagny.Enabled">
+            <summary>
+            Etat activé des reseaux sociaux
+            </summary>
+        </member>
+        <member name="M:WineShop.Models.NavLinks.GetData">
+            <summary>
+            Obtient ou defini les
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.Size.Idfc">
+            <summary>
+            Id de fonction de la devise
+            </summary>
+        </member>
+        <member name="M:WineShop.Models.Size.#ctor">
+            <summary>
+            Constructeur
+            </summary>
+        </member>
+        <member name="T:WineShop.Models.SocialsNetworks">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:WineShop.Models.SocialsNetworks.GetData">
+            <summary>
+            Obtient ou defini les
+            </summary>
+        </member>
+        <member name="T:WineShop.Models.SocialNetwork">
+            <summary>
+            Resaux sociaux
+            </summary>
+            <remarks>
+                <![CDATA[Créé le 30/11/2017 - 11:00:00]]>
+                <![CDATA[Mis à jour le 01/12/2017 - 09:30:00]]>
+            </remarks>
+        </member>
+        <member name="P:WineShop.Models.SocialNetwork.Uid">
+            <summary>
+            Unique identifiant du profil de connection
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.SocialNetwork.Idfc">
+            <summary>
+            Identifiant du profil de connection
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.SocialNetwork.Name">
+            <summary>
+            Nom des Reseaux Sociaux
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.SocialNetwork.Symbol">
+            <summary>
+            Symbole des reseaux sociaux
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.SocialNetwork.Url">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.SocialNetwork.Script">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.SocialNetwork.UseScript">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.SocialNetwork.Enabled">
+            <summary>
+            Etat activé des reseaux sociaux
+            </summary>
+        </member>
+        <member name="M:WineShop.Models.SocialNetwork.#ctor">
+            <summary>
+            Construteur
+            </summary>
+        </member>
+        <member name="M:WineShop.Models.SocialNetwork.#ctor(System.Guid,System.Int32,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="uid"></param>
+            <param name="idfc"></param>
+            <param name="name"></param>
+            <param name="symbol"></param>
+            <param name="url"></param>
+            <param name="Script"></param>
+            <param name="useScript"></param>
+            <param name="enabled"></param>
+        </member>
+        <member name="P:WineShop.Models.SubCategory.Uid">
+            <summary>
+            Unique identifiant
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.SubCategory.UidCategory">
+            <summary>
+            Unique identifiant
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.SubCategory.Id">
+            <summary>
+            Identifiant
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.SubCategory.Name">
+            <summary>
+            Nom des types
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.SubCategory.Description">
+            <summary>
+            Description des types
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.SubCategory.Enabled">
+            <summary>
+            Obtient ou définit l'activation de TypeCategory
+            </summary>
+        </member>
+        <member name="T:WineShop.Models.TypeCategory">
+            <summary>
+            type de produit
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.TypeCategory.Uid">
+            <summary>
+            Unique identifiant
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.TypeCategory.Id">
+            <summary>
+            Identifiant
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.TypeCategory.Name">
+            <summary>
+            Nom des types
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.TypeCategory.Description">
+            <summary>
+            Description des types
+            </summary>
+        </member>
+        <member name="P:WineShop.Models.TypeCategory.Enabled">
+            <summary>
+            Obtient ou définit l'activation de TypeCategory
+            </summary>
+        </member>
+        <member name="T:SqlServerTypes.Utilities">
+            <summary>
+            Utility methods related to CLR Types for SQL Server 
+            </summary>
+        </member>
+        <member name="M:SqlServerTypes.Utilities.LoadNativeAssemblies(System.String)">
+            <summary>
+            Loads the required native assemblies for the current architecture (x86 or x64)
+            </summary>
+            <param name="rootApplicationPath">
+            Root path of the current application. Use Server.MapPath(".") for ASP.NET applications
+            and AppDomain.CurrentDomain.BaseDirectory for desktop applications.
+            </param>
+        </member>
+    </members>
+</doc>

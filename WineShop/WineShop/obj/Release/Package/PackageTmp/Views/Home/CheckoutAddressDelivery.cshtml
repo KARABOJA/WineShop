@@ -1,0 +1,141 @@
+﻿@model WineShop.Models.Views.ModelCheckoutAddress
+<div class="offcanvas-wrapper">
+    <!-- Page Title-->
+    <div class="page-title">
+        <div class="container">
+            <div class="column">
+                <h1>Adresse de livraison</h1>
+            </div>
+            <div class="column">
+                <ul class="breadcrumbs">
+                    <li>
+                        <a href="index.html">Accueil</a>
+                    </li>
+                    <li class="separator">&nbsp;</li>
+                    <li>Adresse de livraison</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Page Content-->
+    <div class="container padding-bottom-3x mb-2">
+        @using (Html.BeginForm("CheckoutAddressDelivery", "Post", FormMethod.Post, new { @class = "login-box" }))
+        {
+            <div class="row">
+                <!-- Checkout Adress-->
+                <div class="col-xl-9 col-lg-8">
+                    <div class="checkout-steps">
+                        <a>5. Résumé</a>
+                        <a><span class="angle"></span>4. Paiment</a>
+                        <a><span class="angle"></span>3. Mode Liv.</a>
+                        <a class="active"><span class="angle"></span>2. Adresse Liv.</a>
+                        <a class="completed" href="@Url.Action("CheckoutAddressInvoice","Home")"><span class="angle"></span><span class="step-indicator icon-circle-check"></span>1. Adresse Fac.</a>
+                    </div>
+                    <h4>Adresse de facturation</h4>
+                    <hr class="padding-bottom-1x">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="checkout-fn">Prénom</label>
+                                @Html.TextBoxFor(Model => Model.FirstName, new { id = "txtFirstName", @type = "text", @placeholder = "Prénom", @required = "required", @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="checkout-ln">Nom</label>
+                                @Html.TextBoxFor(Model => Model.LastName, new { id = "txtLastName", @type = "text", @placeholder = "Nom", @required = "required", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="checkout-email">Courriel</label>
+                                @Html.TextBoxFor(Model => Model.Email, new { id = "txtEmail", @type = "email", @placeholder = "Courriel", @required = "required", @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="checkout-phone">Numero de telephone</label>
+                                @Html.TextBoxFor(Model => Model.Phone, new { id = "txtPhone", @type = "tel", @placeholder = "Téléphone", @required = "required", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="checkout-company">Entreprise</label>
+                                @Html.TextBoxFor(Model => Model.Entreprise, new { id = "txtEntreprise", @type = "text", @placeholder = "Entreprise", @required = "required", @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="checkout-country">Pays</label>
+                                @Html.TextBoxFor(Model => Model.Country, new { id = "txtCountry", @type = "text", @placeholder = "Pays", @required = "required", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="checkout-city">Ville</label>
+                                @Html.TextBoxFor(Model => Model.City, new { id = "txtCity", @type = "text", @placeholder = "Ville", @required = "required", @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="checkout-zip">Code Postal</label>
+                                @Html.TextBoxFor(Model => Model.ZipCode, new { id = "txtZipCode", @type = "text", @placeholder = "Code Postal", @required = "required", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row padding-bottom-1x">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="checkout-address1">Adresse</label>
+                                @Html.TextBoxFor(Model => Model.Address, new { id = "txtAddress", @type = "text", @placeholder = "Adresse", @required = "required", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout-footer">
+                        <div class="column"><a class="btn btn-outline-secondary" href="@Url.Action("CheckoutAddressInvoice","Home")"><i class="icon-arrow-left"></i><span class="hidden-xs-down">&nbsp;Retour à l'adresse de facturation</span></a></div>
+                        <div class="column"><button class="btn btn-primary" type="submit"><span class="hidden-xs-down">Continuer&nbsp;</span><i class="icon-arrow-right"></i></button></div>
+                    </div>
+                </div>
+                <!-- Sidebar          -->
+                <div class="col-xl-3 col-lg-4">
+                    <aside class="sidebar">
+                        <div class="padding-top-2x hidden-lg-up"></div>
+                        <!-- Order Summary Widget-->
+                        <section class="widget widget-order-summary">
+                            <h3 class="widget-title">Resumé de votre commande</h3>
+                            <table class="table">
+
+
+                                <tr>
+                                    <td>
+                                        Sous-total du panier:@WineShop.Models.Baskets.GetAmount() €
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tax Estimée:@WineShop.Models.Baskets.GetAmountVAT() €</td>
+                                </tr>
+                                <tr>
+                                    <td>Total T.T.C.:@WineShop.Models.Baskets.GetAmountATI() €</td>
+                                </tr>
+                                <tr>
+                                    <td>Frais de Livraison: @WineShop.Models.Baskets.GetAmountShipping() €</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-lg text-medium">Net à payer : @WineShop.Models.Baskets.GetAmountATIFinal() € </td>
+                                </tr>
+
+                            </table>
+                        </section>
+                        <!-- Featured Products Widget-->
+                    </aside>
+                </div>
+            </div>
+        }
+        </div>
+    </div>

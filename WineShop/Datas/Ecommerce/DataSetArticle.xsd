@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetArticle" targetNamespace="http://tempuri.org/DataSetArticle.xsd" xmlns:mstns="http://tempuri.org/DataSetArticle.xsd" xmlns="http://tempuri.org/DataSetArticle.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="dbWineShopConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbWineShopConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.dbWineShopConnectionString.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwColorTableAdapter" GeneratorDataComponentClassName="vwColorTableAdapter" Name="vwColor" UserDataComponentName="vwColorTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbWineShopConnectionString (Web.config)" DbObjectName="dbWineShop.dbo.vwColor" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        *
+FROM            vwColor</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CultureInfo" DataSetColumn="CultureInfo" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Uid" DataSetColumn="Uid" />
+              <Mapping SourceColumn="Enabled" DataSetColumn="Enabled" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwArticleTableAdapter" GeneratorDataComponentClassName="vwArticleTableAdapter" Name="vwArticle" UserDataComponentName="vwArticleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbWineShopConnectionString (Web.config)" DbObjectName="dbWineShop.dbo.vwArticle" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        *
+FROM            vwArticle
+WHERE Enabled=1
+ORDER BY CodeProduct</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Uid" DataSetColumn="Uid" />
+              <Mapping SourceColumn="UidUserCreate" DataSetColumn="UidUserCreate" />
+              <Mapping SourceColumn="UidUserUpdate" DataSetColumn="UidUserUpdate" />
+              <Mapping SourceColumn="DtCreate" DataSetColumn="DtCreate" />
+              <Mapping SourceColumn="DtUpdate" DataSetColumn="DtUpdate" />
+              <Mapping SourceColumn="Enabled" DataSetColumn="Enabled" />
+              <Mapping SourceColumn="UidCategoryType" DataSetColumn="UidCategoryType" />
+              <Mapping SourceColumn="UidCategory" DataSetColumn="UidCategory" />
+              <Mapping SourceColumn="UidCategorySub" DataSetColumn="UidCategorySub" />
+              <Mapping SourceColumn="UidColor" DataSetColumn="UidColor" />
+              <Mapping SourceColumn="UidSize" DataSetColumn="UidSize" />
+              <Mapping SourceColumn="UidCurrency" DataSetColumn="UidCurrency" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="CodeProduct" DataSetColumn="CodeProduct" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Notes" DataSetColumn="Notes" />
+              <Mapping SourceColumn="UnitPrice" DataSetColumn="UnitPrice" />
+              <Mapping SourceColumn="Images" DataSetColumn="Images" />
+              <Mapping SourceColumn="Favorit" DataSetColumn="Favorit" />
+              <Mapping SourceColumn="ColorDescription" DataSetColumn="ColorDescription" />
+              <Mapping SourceColumn="SizeDescription" DataSetColumn="SizeDescription" />
+              <Mapping SourceColumn="CurrencySymbol" DataSetColumn="CurrencySymbol" />
+              <Mapping SourceColumn="CurrencyDescription" DataSetColumn="CurrencyDescription" />
+              <Mapping SourceColumn="CurrencyRate" DataSetColumn="CurrencyRate" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="dbWineShopConnectionString (Web.config)" DbObjectName="dbWineShop.dbo.vwArticle" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByCodeProduct" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCodeProduct" GeneratorSourceName="FillByCodeProduct" GetMethodModifier="Public" GetMethodName="GetDataByCodeProduct" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCodeProduct" UserSourceName="FillByCodeProduct">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT * FROM vwArticle WHERE (Enabled = 1) AND (CodeProduct = ?) ORDER BY CodeProduct</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="CodeProduct" DataSourceName="dbWineShop.dbo.vwArticle" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="CodeProduct" Precision="0" ProviderType="NVarChar" Scale="0" Size="1024" SourceColumn="CodeProduct" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="dbWineShopConnectionString (Web.config)" DbObjectName="dbWineShop.dbo.vwArticle" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByUid" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUid" GeneratorSourceName="FillByUid" GetMethodModifier="Public" GetMethodName="GetDataByUid" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUid" UserSourceName="FillByUid">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        *
+FROM            vwArticle
+WHERE Enabled=1 AND Uid=?
+ORDER BY CodeProduct</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="Uid" DataSourceName="dbWineShop.dbo.vwArticle" DataTypeServer="uniqueidentifier" DbType="Object" Direction="Input" ParameterName="Uid" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="1024" SourceColumn="Uid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="dbWineShopConnectionString (Web.config)" DbObjectName="dbWineShop.dbo.vwArticle" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByUidCategory" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUidCategory" GeneratorSourceName="FillByUidCategory" GetMethodModifier="Public" GetMethodName="GetDataByUidCategory" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUidCategory" UserSourceName="FillByUidCategory">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        *
+FROM            vwArticle
+WHERE (Enabled = 1) AND (UidCategory = ?)
+ORDER BY CodeProduct</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="UidCategory" DataSourceName="dbWineShop.dbo.vwArticle" DataTypeServer="uniqueidentifier" DbType="Object" Direction="Input" ParameterName="UidCategory" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="1024" SourceColumn="UidCategory" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="dbWineShopConnectionString (Web.config)" DbObjectName="dbWineShop.dbo.vwArticle" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByUidCategorySub" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUidCategorySub" GeneratorSourceName="FillByUidCategorySub" GetMethodModifier="Public" GetMethodName="GetDataByUidCategorySub" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUidCategorySub" UserSourceName="FillByUidCategorySub">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        *
+FROM            vwArticle
+WHERE (Enabled = 1) AND (UidCategorySub = ?) ORDER BY CodeProduct</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="UidCategorySub" DataSourceName="dbWineShop.dbo.vwArticle" DataTypeServer="uniqueidentifier" DbType="Object" Direction="Input" ParameterName="UidCategorySub" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="1024" SourceColumn="UidCategorySub" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="dbWineShopConnectionString (Web.config)" DbObjectName="dbWineShop.dbo.vwArticle" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillByUidCategoryType" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByUidCategoryType" GeneratorSourceName="FillByUidCategoryType" GetMethodModifier="Public" GetMethodName="GetDataByUidCategoryType" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByUidCategoryType" UserSourceName="FillByUidCategoryType">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        *
+FROM            vwArticle
+WHERE (Enabled = 1) AND (UidCategoryType = ?) ORDER BY CodeProduct</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Param1" ColumnName="UidCategoryType" DataSourceName="dbWineShop.dbo.vwArticle" DataTypeServer="uniqueidentifier" DbType="Object" Direction="Input" ParameterName="UidCategoryType" Precision="0" ProviderType="UniqueIdentifier" Scale="0" Size="1024" SourceColumn="UidCategoryType" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetArticle" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetArticle" msprop:Generator_UserDSName="DataSetArticle">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwColor" msprop:Generator_TableClassName="vwColorDataTable" msprop:Generator_TableVarName="tablevwColor" msprop:Generator_TablePropName="vwColor" msprop:Generator_RowDeletingName="vwColorRowDeleting" msprop:Generator_RowChangingName="vwColorRowChanging" msprop:Generator_RowEvHandlerName="vwColorRowChangeEventHandler" msprop:Generator_RowDeletedName="vwColorRowDeleted" msprop:Generator_UserTableName="vwColor" msprop:Generator_RowChangedName="vwColorRowChanged" msprop:Generator_RowEvArgName="vwColorRowChangeEvent" msprop:Generator_RowClassName="vwColorRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CultureInfo" msprop:Generator_ColumnVarNameInTable="columnCultureInfo" msprop:Generator_ColumnPropNameInRow="CultureInfo" msprop:Generator_ColumnPropNameInTable="CultureInfoColumn" msprop:Generator_UserColumnName="CultureInfo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Uid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUid" msprop:Generator_ColumnPropNameInRow="Uid" msprop:Generator_ColumnPropNameInTable="UidColumn" msprop:Generator_UserColumnName="Uid" type="xs:string" />
+              <xs:element name="Enabled" msprop:Generator_ColumnVarNameInTable="columnEnabled" msprop:Generator_ColumnPropNameInRow="Enabled" msprop:Generator_ColumnPropNameInTable="EnabledColumn" msprop:Generator_UserColumnName="Enabled" type="xs:boolean" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vwArticlex" msprop:Generator_TableClassName="vwArticlexDataTable" msprop:Generator_TableVarName="tablevwArticlex" msprop:Generator_TablePropName="vwArticlex" msprop:Generator_RowDeletingName="vwArticlexRowDeleting" msprop:Generator_RowChangingName="vwArticlexRowChanging" msprop:Generator_RowEvHandlerName="vwArticlexRowChangeEventHandler" msprop:Generator_RowDeletedName="vwArticlexRowDeleted" msprop:Generator_UserTableName="vwArticlex" msprop:Generator_RowChangedName="vwArticlexRowChanged" msprop:Generator_RowEvArgName="vwArticlexRowChangeEvent" msprop:Generator_RowClassName="vwArticlexRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Enabled" msprop:Generator_ColumnVarNameInTable="columnEnabled" msprop:Generator_ColumnPropNameInRow="Enabled" msprop:Generator_ColumnPropNameInTable="EnabledColumn" msprop:Generator_UserColumnName="Enabled" type="xs:boolean" />
+              <xs:element name="UidCategoryType" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCategoryType" msprop:Generator_ColumnPropNameInRow="UidCategoryType" msprop:Generator_ColumnPropNameInTable="UidCategoryTypeColumn" msprop:Generator_UserColumnName="UidCategoryType" type="xs:string" />
+              <xs:element name="UidCategory" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCategory" msprop:Generator_ColumnPropNameInRow="UidCategory" msprop:Generator_ColumnPropNameInTable="UidCategoryColumn" msprop:Generator_UserColumnName="UidCategory" type="xs:string" />
+              <xs:element name="UidCategorySub" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCategorySub" msprop:Generator_ColumnPropNameInRow="UidCategorySub" msprop:Generator_ColumnPropNameInTable="UidCategorySubColumn" msprop:Generator_UserColumnName="UidCategorySub" type="xs:string" />
+              <xs:element name="CodeProduct" msprop:Generator_ColumnVarNameInTable="columnCodeProduct" msprop:Generator_ColumnPropNameInRow="CodeProduct" msprop:Generator_ColumnPropNameInTable="CodeProductColumn" msprop:Generator_UserColumnName="CodeProduct">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vwArticle" msprop:Generator_TableClassName="vwArticleDataTable" msprop:Generator_TableVarName="tablevwArticle" msprop:Generator_TablePropName="vwArticle" msprop:Generator_RowDeletingName="vwArticleRowDeleting" msprop:Generator_RowChangingName="vwArticleRowChanging" msprop:Generator_RowEvHandlerName="vwArticleRowChangeEventHandler" msprop:Generator_RowDeletedName="vwArticleRowDeleted" msprop:Generator_UserTableName="vwArticle" msprop:Generator_RowChangedName="vwArticleRowChanged" msprop:Generator_RowEvArgName="vwArticleRowChangeEvent" msprop:Generator_RowClassName="vwArticleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Uid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUid" msprop:Generator_ColumnPropNameInRow="Uid" msprop:Generator_ColumnPropNameInTable="UidColumn" msprop:Generator_UserColumnName="Uid" type="xs:string" />
+              <xs:element name="UidUserCreate" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidUserCreate" msprop:Generator_ColumnPropNameInRow="UidUserCreate" msprop:Generator_ColumnPropNameInTable="UidUserCreateColumn" msprop:Generator_UserColumnName="UidUserCreate" type="xs:string" />
+              <xs:element name="UidUserUpdate" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidUserUpdate" msprop:Generator_ColumnPropNameInRow="UidUserUpdate" msprop:Generator_ColumnPropNameInTable="UidUserUpdateColumn" msprop:Generator_UserColumnName="UidUserUpdate" type="xs:string" />
+              <xs:element name="DtCreate" msprop:Generator_ColumnVarNameInTable="columnDtCreate" msprop:Generator_ColumnPropNameInRow="DtCreate" msprop:Generator_ColumnPropNameInTable="DtCreateColumn" msprop:Generator_UserColumnName="DtCreate" type="xs:dateTime" />
+              <xs:element name="DtUpdate" msprop:Generator_ColumnVarNameInTable="columnDtUpdate" msprop:Generator_ColumnPropNameInRow="DtUpdate" msprop:Generator_ColumnPropNameInTable="DtUpdateColumn" msprop:Generator_UserColumnName="DtUpdate" type="xs:dateTime" />
+              <xs:element name="Enabled" msprop:Generator_ColumnVarNameInTable="columnEnabled" msprop:Generator_ColumnPropNameInRow="Enabled" msprop:Generator_ColumnPropNameInTable="EnabledColumn" msprop:Generator_UserColumnName="Enabled" type="xs:boolean" />
+              <xs:element name="UidCategoryType" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCategoryType" msprop:Generator_ColumnPropNameInRow="UidCategoryType" msprop:Generator_ColumnPropNameInTable="UidCategoryTypeColumn" msprop:Generator_UserColumnName="UidCategoryType" type="xs:string" />
+              <xs:element name="UidCategory" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCategory" msprop:Generator_ColumnPropNameInRow="UidCategory" msprop:Generator_ColumnPropNameInTable="UidCategoryColumn" msprop:Generator_UserColumnName="UidCategory" type="xs:string" />
+              <xs:element name="UidCategorySub" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCategorySub" msprop:Generator_ColumnPropNameInRow="UidCategorySub" msprop:Generator_ColumnPropNameInTable="UidCategorySubColumn" msprop:Generator_UserColumnName="UidCategorySub" type="xs:string" />
+              <xs:element name="UidColor" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidColor" msprop:Generator_ColumnPropNameInRow="UidColor" msprop:Generator_ColumnPropNameInTable="UidColorColumn" msprop:Generator_UserColumnName="UidColor" type="xs:string" />
+              <xs:element name="UidSize" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidSize" msprop:Generator_ColumnPropNameInRow="UidSize" msprop:Generator_ColumnPropNameInTable="UidSizeColumn" msprop:Generator_UserColumnName="UidSize" type="xs:string" />
+              <xs:element name="UidCurrency" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUidCurrency" msprop:Generator_ColumnPropNameInRow="UidCurrency" msprop:Generator_ColumnPropNameInTable="UidCurrencyColumn" msprop:Generator_UserColumnName="UidCurrency" type="xs:string" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodeProduct" msprop:Generator_ColumnVarNameInTable="columnCodeProduct" msprop:Generator_ColumnPropNameInRow="CodeProduct" msprop:Generator_ColumnPropNameInTable="CodeProductColumn" msprop:Generator_UserColumnName="CodeProduct">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Notes" msprop:Generator_ColumnVarNameInTable="columnNotes" msprop:Generator_ColumnPropNameInRow="Notes" msprop:Generator_ColumnPropNameInTable="NotesColumn" msprop:Generator_UserColumnName="Notes" type="xs:int" />
+              <xs:element name="UnitPrice" msprop:Generator_ColumnVarNameInTable="columnUnitPrice" msprop:Generator_ColumnPropNameInRow="UnitPrice" msprop:Generator_ColumnPropNameInTable="UnitPriceColumn" msprop:Generator_UserColumnName="UnitPrice" type="xs:double" />
+              <xs:element name="Images" msprop:Generator_ColumnVarNameInTable="columnImages" msprop:Generator_ColumnPropNameInRow="Images" msprop:Generator_ColumnPropNameInTable="ImagesColumn" msprop:Generator_UserColumnName="Images">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Favorit" msprop:Generator_ColumnVarNameInTable="columnFavorit" msprop:Generator_ColumnPropNameInRow="Favorit" msprop:Generator_ColumnPropNameInTable="FavoritColumn" msprop:Generator_UserColumnName="Favorit" type="xs:boolean" />
+              <xs:element name="ColorDescription" msprop:Generator_ColumnVarNameInTable="columnColorDescription" msprop:Generator_ColumnPropNameInRow="ColorDescription" msprop:Generator_ColumnPropNameInTable="ColorDescriptionColumn" msprop:Generator_UserColumnName="ColorDescription">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SizeDescription" msprop:Generator_ColumnVarNameInTable="columnSizeDescription" msprop:Generator_ColumnPropNameInRow="SizeDescription" msprop:Generator_ColumnPropNameInTable="SizeDescriptionColumn" msprop:Generator_UserColumnName="SizeDescription">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CurrencySymbol" msprop:Generator_ColumnVarNameInTable="columnCurrencySymbol" msprop:Generator_ColumnPropNameInRow="CurrencySymbol" msprop:Generator_ColumnPropNameInTable="CurrencySymbolColumn" msprop:Generator_UserColumnName="CurrencySymbol">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CurrencyDescription" msprop:Generator_ColumnVarNameInTable="columnCurrencyDescription" msprop:Generator_ColumnPropNameInRow="CurrencyDescription" msprop:Generator_ColumnPropNameInTable="CurrencyDescriptionColumn" msprop:Generator_UserColumnName="CurrencyDescription">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CurrencyRate" msprop:Generator_ColumnVarNameInTable="columnCurrencyRate" msprop:Generator_ColumnPropNameInRow="CurrencyRate" msprop:Generator_ColumnPropNameInTable="CurrencyRateColumn" msprop:Generator_UserColumnName="CurrencyRate" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

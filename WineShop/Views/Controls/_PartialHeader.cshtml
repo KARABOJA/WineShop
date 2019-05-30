@@ -1,0 +1,165 @@
+﻿@{
+    WineShop.Models.Compagny compagny = WineShop.Tools.App.Compagny;
+    WineShop.Models.Customer customer = WineShop.Tools.Security.Customer.GetCurrent();
+}
+<!-- Topbar-->
+<div class="topbar">
+    @{
+        <div class="topbar-column">
+            <a class="hidden-md-down" href="mailto:@(compagny.Mail)"><i class="icon-mail"></i>&nbsp; @(compagny.Mail)</a>
+            <a class="hidden-md-down" href="tel:@(compagny.Phone.Replace(".", string.Empty).Replace("/", string.Empty).Replace("-", string.Empty).Replace(" ", string.Empty).Replace("_", string.Empty))"><i class="icon-phone"></i>&nbsp; @(compagny.Phone)</a>
+            @if (Context.Request.Browser.IsMobileDevice)
+            {
+                <a class="" href="tel:@(compagny.Phone.Replace(".", string.Empty).Replace("/", string.Empty).Replace("-", string.Empty).Replace(" ", string.Empty).Replace("_", string.Empty))"><i class="icon-phone"></i></a>
+            }
+            @foreach (WineShop.Models.SocialNetwork item in WineShop.Models.SocialsNetworks.GetData().OrderBy(x => x.Idfc))
+            {
+                <a class="social-button sb-@(item.Symbol) shape-none sb-dark" href="@(item.Url)" target="_blank"><i class="socicon-@(item.Symbol)"></i></a>
+            }
+        </div>
+    }
+    <div class="topbar-column">
+        <div class="lang-currency-switcher-wrap">
+            <div class="lang-currency-switcher dropdown-toggle">
+                <span class="language"><img alt="@(WineShop.Tools.App.Language.GetCurrent().Description)" src="/Images/Flags/@(WineShop.Tools.App.Language.GetCurrent().CodeIso).png"></span>
+                <span class="currency">@(WineShop.Tools.App.Currency.GetCurrent().Description)</span>
+            </div>
+            <div class="dropdown-menu">
+                <div class="currency-select">
+                    @{
+                        <select class="form-control form-control-rounded form-control-sm">
+                            @foreach (var item in WineShop.Models.Currencies.GetData())
+                            {
+                                <option value="@(item.Name)">@(item.Description)</option>
+                            }
+                        </select>
+                    }
+                </div>
+                @{
+                    foreach (var item in WineShop.Models.Languages.GetData())
+                    {<a class="dropdown-item" href="/@(item.CultureInfo)"><img src="/Images/Flags/@(item.CodeIso).png" alt="@(item.Description)">@(item.Description)</a>}
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Navbar-->
+<!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+<header class="navbar navbar-sticky">
+    <!-- Search-->
+    <form class="site-search" method="get">
+        <input type="text" name="site_search" placeholder="Type to search...">
+        <div class="search-tools"><span class="clear-search">Clear</span><span class="close-search"><i class="icon-cross"></i></span></div>
+    </form>
+    <div class="site-branding">
+        <div class="inner">
+            <!-- Off-Canvas Toggle (#shop-categories)<a class="offcanvas-toggle cats-toggle" href="#shop-categories" data-toggle="offcanvas"></a>-->
+            <!-- Off-Canvas Toggle (#mobile-menu)--><a class="offcanvas-toggle menu-toggle" href="#mobile-menu" data-toggle="offcanvas"></a>
+            <!-- Site Logo--><a class="site-logo" href="@Url.Action("Index","Home")"><img src="/Images/Logo/logo.png" alt="wineshope"></a>
+        </div>
+    </div>
+    <!-- Main Navigation-->
+    <nav class="site-menu">
+        <ul>
+            @foreach (WineShop.Models.NavLink item in WineShop.Models.NavLinks.GetData().Where(x => x.First == true).OrderBy(x => x.Id))
+            {
+                <li class="has-megamenu">
+                    <a href="@Url.Action(item.ActionLink, item.ControllerLink)">
+                        <span>
+                            @{
+                                if (!string.IsNullOrEmpty(item.Symbol))
+                                {<i class="fa fa-@(item.Symbol)"></i>@Html.Raw("&nbsp;")}
+                            }
+                            @(item.Description)
+                        </span>
+                    </a>
+                </li>
+            }
+            @foreach (WineShop.Models.TypeCategory itemTypeCategory in WineShop.Models.TypeCategories.GetData().OrderBy(x => x.Id))
+            {
+                <li class="has-megamenu">
+                    <a href="@Url.Action("Articles", "Articles", new { type = itemTypeCategory.Name })"><span>@(itemTypeCategory.Description)</span></a>
+                    <ul class="mega-menu">
+                        @foreach (WineShop.Models.Category itemCategory in WineShop.Models.Categories.GetDataByUidTypeCategory(itemTypeCategory.Uid))
+                        {
+                            <li>
+                                <span class="mega-menu-title">@(itemCategory.Description)</span>
+                                <ul class="sub-menu">
+                                    @foreach (WineShop.Models.SubCategory itemSubCategory in WineShop.Models.SubCategories.GetDataByUidCategory(itemCategory.Uid))
+                                    {
+                                        <li><a href="@Url.Action("Articles", "Articles", new{ @type= itemTypeCategory.Name, @categorie = itemCategory.Name, @subcategorie = itemSubCategory.Name})">@(itemSubCategory.Description)</a></li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </li>
+            }
+            @foreach (WineShop.Models.NavLink item in WineShop.Models.NavLinks.GetData().Where(x => x.First == false).OrderBy(x => x.Id))
+            {
+                <li class="has-megamenu">
+                    <a href="@Url.Action(item.ActionLink, item.ControllerLink)"><span>@(item.Description)</span></a>
+                </li>
+            }
+        </ul>
+    </nav>
+    <!-- Toolbar-->
+    <div class="toolbar">
+        <div class="inner">
+            <div class="tools">
+                <!--<div class="search"><i class="icon-search"></i></div>-->
+                <div class="account">
+                    @if (customer == null)
+                    {
+                    <a href="@Url.Action("CustomerLogin","Home")"></a><i class="icon-user"></i>
+                    }
+                    else
+                    {
+                    <a href="@Url.Action("Profile","Profile")"></a><i class="icon-head"></i>
+                        <ul class="toolbar-dropdown">
+                            <li class="sub-menu-user">
+                                <div class="user-ava">
+                                    <img src="@Url.Action("ImageProfile", "Files")" alt="@(customer.FullName)">
+                                </div>
+                                <div class="user-info">
+                                    <h6 class="user-name">@(customer.FullName)</h6>
+                                </div>
+                            </li>
+                            <li><a href="@Url.Action("Profile","Profile")">Mon Profil</a></li>
+                            <li class="sub-menu-separator"></li>
+                            <li><a href="@Url.Action("CustomerLogout", "Home")"><i class="icon-unlock"></i>&nbsp;Déconnexion</a></li>
+                        </ul>
+                    }
+                </div>
+                <div class="cart">
+                    <a href="@Url.Action("Baskets", "Home")"></a><i class="icon-shopping-cart"></i><span class="count">@WineShop.Models.Baskets.Count</span><span class="subtotal">@(WineShop.Models.Baskets.GetAmountATI().ToString(WineShop.Tools.Framework.PriceFormat)) @(WineShop.Tools.App.Currency.GetCurrent().Symbol)</span>
+                    <div class="toolbar-dropdown">
+                        @foreach (WineShop.Models.Basket item in WineShop.Models.Baskets.GetData())
+                        {
+                            <div class="dropdown-product-item">
+                                <span class="dropdown-product-remove"><i class="icon-cross btn-remove-basket" uid="@item.Uid"></i></span>
+                                <a class="dropdown-product-thumb" href="@Url.Action("Article","Articles",new { @id=item.CodeProduct})"><img src="/Images/Shop/Products/@(item.CodeProduct).jpg" alt="Product" /></a>
+                                <div class="dropdown-product-info">
+                                    <a class="dropdown-product-title" href="@Url.Action("Article","Articles",new { @id=item.CodeProduct})">@(item.Name)</a>
+                                    <span class="dropdown-product-details">(@item.AmountATI.ToString(WineShop.Tools.Framework.PriceFormat)) @(WineShop.Tools.App.Currency.GetCurrent().Symbol)</span>
+                                </div>
+                            </div>
+                        }
+                        <div class="toolbar-dropdown-group">
+                            <div class="column"><span class="text-lg">Total:</span></div>
+                            <div class="column text-right"><span class="text-lg text-medium">@(WineShop.Models.Baskets.GetAmountATI().ToString(WineShop.Tools.Framework.PriceFormat)) @(WineShop.Tools.App.Currency.GetCurrent().Symbol)</span></div>
+                        </div>
+                        @if (WineShop.Models.Baskets.Count > 0)
+                        {
+                            <div class="toolbar-dropdown-group">
+                                <div class="column"><a class="btn btn-sm btn-block btn-secondary" href="@Url.Action("Baskets", "Home")">Voir le panier</a></div>
+                                <div class="column"><a class="btn btn-sm btn-block btn-success" href="@Url.Action("CheckoutAddressInvoice", "Home")">Commander</a></div>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>

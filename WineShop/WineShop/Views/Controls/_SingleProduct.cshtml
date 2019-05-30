@@ -1,0 +1,105 @@
+﻿@model WineShop.Models.Article
+<div class="row">
+    <!-- Poduct Gallery-->
+    <div class="col-md-6">
+        <div class="product-gallery">
+            <!--<span class="product-badge text-danger">30% Off</span>-->
+            <div class="gallery-wrapper" data-pswp-uid="1">
+                <div class="gallery-item active"><a href="/Images/shop/products/@(Model.CodeProduct).jpg" data-hash="one" data-size="309x825"></a></div>
+            </div>
+            <div class="product-carousel owl-carousel owl-loaded owl-drag">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: 0s; width: 2160px;">
+                        <div class="owl-item active" style="width: 432px;">
+                            <div data-hash="one">
+                                <img src="/Images/shop/products/@(Model.CodeProduct).jpg" alt="Product">
+                            </div>
+                        </div>
+                        <!--<div class="owl-item" style="width: 432px;">
+                <div data-hash="two">
+                    <img src="/Images/shop/single/02.jpg" alt="Product">
+                </div>
+            </div>
+            <div class="owl-item" style="width: 432px;">
+                <div data-hash="three">
+                    <img src="/Images/shop/single/03.jpg" alt="Product">
+                </div>
+            </div>
+            <div class="owl-item" style="width: 432px;">
+                <div data-hash="four"><img src="/Images/shop/single/04.jpg" alt="Product"></div>
+            </div>
+            <div class="owl-item" style="width: 432px;">
+                <div data-hash="five"><img src="/Images/shop/single/05.jpg" alt="Product"></div>
+            </div>-->
+                    </div>
+                </div>
+                <!--<div class="owl-nav disabled"><div class="owl-prev">prev</div><div class="owl-next">next</div></div><div class="owl-dots disabled"></div>-->
+            </div>
+            <!--      <ul class="product-thumbnails">
+                <li class="active"><a href="#one"><img src="/Images/shop/single/th01.jpg" alt="Product"></a></li>
+                <li><a href="#two"><img src="/Images/shop/single/th02.jpg" alt="Product"></a></li>
+                <li><a href="#three"><img src="/Images/shop/single/th03.jpg" alt="Product"></a></li>
+                <li><a href="#four"><img src="/Images/shop/single/th04.jpg" alt="Product"></a></li>
+                <li><a href="#five"><img src="/Images/shop/single/th05.jpg" alt="Product"></a></li>
+                <li><a href="#five"><img src="/Images/shop/single/th05.jpg" alt="Product"></a></li>
+                <li><a href="#five"><img src="/Images/shop/single/th05.jpg" alt="Product"></a></li>
+                <li><a href="#five"><img src="/Images/shop/single/th05.jpg" alt="Product"></a></li>
+                <li><a href="#five"><img src="/Images/shop/single/th05.jpg" alt="Product"></a></li>
+            </ul>-->
+        </div>
+    </div>
+    <!-- Product Info-->
+    <div class="col-md-6">
+        <div class="padding-top-2x mt-2 hidden-md-up"></div>
+        <div class="rating-stars">
+            @for (int iStar = 0; iStar < 5; iStar++)
+            {
+                if (iStar < (int)Model.Notes)
+                {<i class="icon-star filled"></i>}
+                else
+                {<i class="icon-star"></i>}
+            }
+        </div>
+        <!--<span class="text-muted align-middle">&nbsp;&nbsp;4.2 | 3 customer reviews</span>-->
+        <h2 class="padding-top-1x text-normal">@(Model.Name)</h2>
+        <span class="h2 d-block">
+            <span class="text-muted text-normal">@Model.UnitPrice.ToString("0.00") @Model.CurrencySymbol</span>
+        </span>
+        <p>@Model.Description</p>
+        <!--<div class="row margin-top-1x">
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <label for="color">Choose color</label>
+                    <select class="form-control" id="color">
+                        <option>Blanc</option>
+                        <option>Rouge</option>
+                        <option>Rosé</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <select class="form-control" id="quantity">
+                        <option>1</option>
+                        <option>6</option>
+                        <option>12</option>
+                    </select>
+                </div>
+            </div>
+        </div>-->
+        <div class="pt-1 mb-2"><span class="text-medium"></span>Code Produit : @(Model.CodeProduct)</div>
+        <!--<div class="padding-bottom-1x mb-2"><span class="text-medium">Categories:&nbsp;</span><a class="navi-link" href="#">Bordeaux,</a><a class="navi-link" href="#"> Rouge</a></div>-->
+        <hr class="mb-3">
+        <div class="d-flex flex-wrap justify-content-between">
+            <!--<div class="entry-share mt-2 mb-2">
+                <span class="text-muted">Share:</span>
+                <div class="share-links"><a class="social-button shape-circle sb-facebook" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i class="socicon-facebook"></i></a><a class="social-button shape-circle sb-twitter" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i class="socicon-twitter"></i></a><a class="social-button shape-circle sb-instagram" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Instagram"><i class="socicon-instagram"></i></a><a class="social-button shape-circle sb-google-plus" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google +"><i class="socicon-googleplus"></i></a></div>
+            </div>-->
+            <div class="sp-buttons mt-2 mb-2">
+                <!--<button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="" data-original-title="Whishlist"><i class="icon-heart"></i></button>-->
+                <button class="btn btn-primary btn-add-basket" uid="@Model.Uid" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="successfuly added to cart!"><i class="icon-bag"></i> Ajouter au panier</button>
+            </div>
+        </div>
+    </div>
+</div>

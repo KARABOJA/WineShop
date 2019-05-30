@@ -1,0 +1,63 @@
+﻿@model List<WineShop.Models.Article>
+@{
+    string sTitle = string.Empty;
+    if (ViewContext.RouteData.Values.ContainsKey("type"))
+    {
+        sTitle += WineShop.Models.TypeCategories.GetDataByName(ViewContext.RouteData.Values["type"].ToString()).Description;
+    }
+    if (ViewContext.RouteData.Values.ContainsKey("categorie"))
+    {
+        if (!string.IsNullOrEmpty(sTitle)) { sTitle += " - "; }
+        sTitle += WineShop.Models.Categories.GetDataByName(ViewContext.RouteData.Values["categorie"].ToString()).Description;
+    }
+    if (ViewContext.RouteData.Values.ContainsKey("subcategorie"))
+    {
+        if (!string.IsNullOrEmpty(sTitle)) { sTitle += " - "; }
+        sTitle += WineShop.Models.SubCategories.GetDataByName(ViewContext.RouteData.Values["subcategorie"].ToString()).Description;
+    }
+
+
+    ViewBag.Title = $".: WineShop - {sTitle} :.";
+}
+
+@section SectionScriptsBegin{
+}
+<!-- Page Title-->
+<div class="page-title">
+    <div class="container">
+        <div class="column">
+            <h1>@sTitle</h1>
+        </div>
+        <div class="column">
+            <ul class="breadcrumbs">
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
+                <li class="separator">&nbsp;</li>
+                <li>@sTitle</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Page Content-->
+<div class="container padding-bottom-3x mb-1">
+    <div class="row">
+        <!-- Products-->
+        <div class="col-xl-9 col-lg-8 order-lg-2">
+            <!-- Products Grid-->
+            <div class="isotope-grid cols-3 mb-2" style="position: relative; height: 1399.83px;">
+                <div class="gutter-sizer"></div>
+                <div class="grid-sizer"></div>
+                <!-- Product-->
+                @foreach (WineShop.Models.Article item in Model)
+                {
+                    @Html.Partial($"/Views/Controls/_Product.cshtml", item);
+                }
+            </div>
+            <!-- Pagination-->
+            <nav class="pagination">
+            </nav>
+        </div>
+        @Html.Partial("/Views/Controls/_MiniSidebar.cshtml")
+    </div>
+</div>

@@ -1,0 +1,173 @@
+﻿@model WineShop.Models.Customer
+@section SectionScriptsBegin{
+<script>
+    $(function (){
+        $(".edit-avatar").click(function () {
+            $("#imgProfile").trigger('click');
+        });
+        $("#imgProfile").change(function () {
+            $("#frmPhotoProfile").submit();
+        });
+    });
+</script>
+}
+<!-- Page Title-->
+<div class="page-title">
+    <div class="container">
+        <div class="column">
+            <h1>Mon Profil</h1>
+        </div>
+        <div class="column">
+            <ul class="breadcrumbs">
+                <li>
+                    <a href="@Url.Action("Index","Home")">Accueil</a>
+                </li>
+                <li class="separator">&nbsp;</li>
+                <li>Mon Profil</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Page Content-->
+<div class="container padding-bottom-3x mb-2">
+    <div class="row">
+        <div class="col-lg-4">
+            <aside class="user-info-wrapper">
+                @using (Html.BeginForm("UploadPhoto", "Files", FormMethod.Post, new { id = "frmPhotoProfile", name = "frmPhotoProfile", @enctype = "multipart/form-data" }))
+                {
+                    <div class="user-cover" style="background-image: url(/Images/account/user-cover-img.jpg);">
+                    </div>
+                    <div class="user-info">
+                        <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="@Url.Action("ImageProfile", "Files")" alt="User" /></div>
+                        <div class="user-data">
+                            <h4>@(Model.FullName)</h4><span></span>
+                        </div>
+                    </div>
+                    <input type="file" id="imgProfile" name="imgProfile" accept="image/*" class="d-none">
+                }
+            </aside>
+            <nav class="list-group">
+                <a class="list-group-item with-badge" href="@Url.Action("Commands","Profile")"><i class="icon-bag"></i>Commande(s)<span class="badge badge-primary badge-pill">@WineShop.Models.CustomerCommands.GetDataByUidCustomer(Model.Uid).Count</span></a>
+                <a class="list-group-item with-badge" href="@Url.Action("Invoices","Profile")"><i class="icon-bag"></i>Facture(s)<span class="badge badge-primary badge-pill">@WineShop.Models.CustomerInvoices.GetDataByUidCustomer(Model.Uid).Count</span></a>
+                <a class="list-group-item active" href="#"><i class="icon-head"></i>Profile</a>
+                <!--<a class="list-group-item" href="account-address.html"><i class="icon-map"></i>Addresses</a>
+                <a class="list-group-item with-badge" href="account-wishlist.html"><i class="icon-heart"></i>Wishlist<span class="badge badge-primary badge-pill">3</span></a>
+                <a class="list-group-item with-badge" href="account-tickets.html"><i class="icon-tag"></i>My Tickets<span class="badge badge-primary badge-pill">4</span></a>-->
+            </nav>
+        </div>
+        <div class="col-lg-8">
+            <div class="padding-top-2x mt-2 hidden-lg-up"></div>
+            @using (Html.BeginForm("UpdateCustomer", "Post", FormMethod.Post))
+            {
+                <div class="row">
+                    <div class="col col-md-12 mb-4">
+                        <h4>Informations Personnels</h4>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="account-fn">Prénom</label>
+                            @Html.TextBoxFor(Model => Model.NameFirst, new { id = "txtNameFirst", @type = "text", @placeholder = "Prénom", @required = "required", @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="account-ln">Nom</label>
+                            @Html.TextBoxFor(Model => Model.NameLast, new { id = "txtNameLast", @type = "text", @placeholder = "Nom", @required = "required", @class = "form-control" })
+                            <!--<input class="form-control" type="text" id="account-ln" value="Adams" required>-->
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="account-email">Courriel</label>
+                            @Html.TextBoxFor(Model => Model.EmailAddress, new { id = "txtEmailAddress", @type = "text", @placeholder = "Courriel", @required = "required", @class = "form-control" })
+                            <!--<input class="form-control" type="email" id="account-email" value="daniel.adams@mail.com" disabled>-->
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="account-phone">Téléphone</label>
+                            @Html.TextBoxFor(Model => Model.PhoneNumber, new { id = "txtNameLast", @type = "text", @placeholder = "Numero de Téléphone", @required = "required", @class = "form-control" })
+                            <!--<input class="form-control" type="text" id="account-phone" value="+7(805) 348 95 72" required>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-12 mb-4">
+                        <h4>Adresse Facturation</h4>
+                    </div>
+                    <div class="col col-md-6">
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="account-email">Pays</label>
+                            @Html.TextBoxFor(Model => Model.InvoiceCountry, new { id = "txtInvoiceCountry", @type = "text", @placeholder = "Pays", @required = "required", @class = "form-control" })
+                            <!--<input class="form-control" type="email" id="account-email" value="daniel.adams@mail.com" disabled>-->
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="account-ln">Code Postal</label>
+                            @Html.TextBoxFor(Model => Model.InvoiceZipCode, new { id = "txtInvoiceZipCode", @type = "text", @placeholder = "Code Postal", @required = "required", @class = "form-control" })
+                            <!--<input class="form-control" type="text" id="account-ln" value="Adams" required>-->
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="account-email">Ville</label>
+                            @Html.TextBoxFor(Model => Model.InvoiceCity, new { id = "txtInvoiceCity", @type = "text", @placeholder = "Ville", @required = "required", @class = "form-control" })
+                            <!--<input class="form-control" type="email" id="account-email" value="daniel.adams@mail.com" disabled>-->
+                        </div>
+                    </div>
+                    <div class="col col-md-12">
+                        <div class="form-group">
+                            <label for="account-fn">Adresse</label>
+                            @Html.TextBoxFor(Model => Model.InvoiceAddress, new { id = "txtInvoiceAddress", @type = "text", @placeholder = "Adresse", @required = "required", @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-12 mb-4">
+                        <h4>Adresse Livraison</h4>
+                    </div>
+                    <div class="col col-md-6">
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="account-email">Pays</label>
+                            @Html.TextBoxFor(Model => Model.DeliveryCountry, new { id = "txtDeliveryCountry", @type = "text", @placeholder = "Pays", @required = "required", @class = "form-control" })
+                            <!--<input class="form-control" type="email" id="account-email" value="daniel.adams@mail.com" disabled>-->
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="account-ln">Code Postal</label>
+                            @Html.TextBoxFor(Model => Model.DeliveryZipCode, new { id = "txtInvoiceZipCode", @type = "text", @placeholder = "Code Postal", @required = "required", @class = "form-control" })
+                            <!--<input class="form-control" type="text" id="account-ln" value="Adams" required>-->
+                        </div>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="form-group">
+                            <label for="account-email">Ville</label>
+                            @Html.TextBoxFor(Model => Model.DeliveryCity, new { id = "txtInvoiceCity", @type = "text", @placeholder = "Ville", @required = "required", @class = "form-control" })
+                            <!--<input class="form-control" type="email" id="account-email" value="daniel.adams@mail.com" disabled>-->
+                        </div>
+                    </div>
+                    <div class="col col-md-12">
+                        <div class="form-group">
+                            <label for="account-fn">Adresse</label>
+                            @Html.TextBoxFor(Model => Model.DeliveryAddress, new { id = "txtInvoiceAddress", @type = "text", @placeholder = "Adresse", @required = "required", @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-md-6">
+                    </div>
+                    <div class="col col-md-6 text-right">
+                        <button class="btn btn-outline-info" type="submit">Mettre à jour</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

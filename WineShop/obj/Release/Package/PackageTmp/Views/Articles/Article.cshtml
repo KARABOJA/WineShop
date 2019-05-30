@@ -1,0 +1,30 @@
+﻿@model WineShop.Models.Article
+
+@{
+    ViewBag.Title = "Details";
+}
+<!-- Page Title-->
+<div class="page-title">
+    <div class="container">
+        <div class="column">
+            <h1>Produit</h1>
+        </div>
+        <div class="column">
+            <ul class="breadcrumbs">
+                <li>
+                    <a href="@Url.Action("Index","Home")">Accueil</a>
+                </li>
+                <li class="separator">&nbsp;</li>
+                <!--<li>
+                    <a href="@Url.Action("Index","Home")">Accueil</a>
+                </li>
+                <li class="separator">&nbsp;</li>-->
+                <li>@Model.CodeProduct</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Page Content-->
+<div class="container padding-bottom-3x mb-1">
+    @Html.Partial($"/Views/Controls/_SingleProduct.cshtml", Model)
+</div>
